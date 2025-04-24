@@ -1,1 +1,1140 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlainTech Solutions - IT Services in Plain Language</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4F46E5",
+              secondary: "#10B981",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafb;
+      color: #1f2937;
+      transition: background-color 0.3s, color 0.3s;
+      }
+      body.dark {
+      background-color: #111827;
+      color: #f3f4f6;
+      }
+      .hero-section {
+      background-image: url('https://readdy.ai/api/search-image?query=A%20modern%2C%20clean%20office%20workspace%20with%20soft%20natural%20light%2C%20showing%20a%20desk%20with%20a%20computer%20and%20a%20person%20working.%20The%20left%20side%20of%20the%20image%20has%20a%20smooth%20gradient%20or%20empty%20space%20that%20will%20blend%20perfectly%20with%20text%20overlay.%20The%20right%20side%20shows%20technology%20being%20used%20in%20a%20friendly%2C%20approachable%20way.%20The%20overall%20mood%20is%20warm%2C%20inviting%20and%20professional%20without%20being%20corporate.&width=1600&height=800&seq=12345&orientation=landscape');
+      background-size: cover;
+      background-position: center;
+      }
+      input:focus, button:focus {
+      outline: none;
+      }
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen transition-colors duration-300">
+    <!-- Header -->
+    <header class="bg-white shadow-sm dark:bg-gray-900">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <button
+          id="darkModeToggle"
+          class="w-10 h-10 flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
+        >
+          <i class="ri-sun-line dark:hidden"></i>
+          <i class="ri-moon-line hidden dark:block text-white"></i>
+        </button>
+        <a href="#" class="flex items-center gap-2">
+          <span class="text-3xl font-['Pacifico'] text-primary">PlainTech</span>
+          <span class="text-xl font-semibold">Solutions</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6">
+          <a
+            href="#services"
+            class="text-gray-700 hover:text-primary transition-colors"
+            >Services</a
+          >
+          <a
+            href="#why-us"
+            class="text-gray-700 hover:text-primary transition-colors"
+            >Why Choose Us</a
+          >
+          <a
+            href="#clients"
+            class="text-gray-700 hover:text-primary transition-colors"
+            >Who We Help</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-700 hover:text-primary transition-colors"
+            >Contact</a
+          >
+          <button
+            class="bg-primary text-white px-5 py-2 !rounded-button whitespace-nowrap hover:bg-primary/90 transition-colors"
+          >
+            Get Help Now
+          </button>
+        </nav>
+        <button class="md:hidden w-10 h-10 flex items-center justify-center">
+          <i class="ri-menu-line ri-lg"></i>
+        </button>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero-section relative">
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-white/90 to-white/20 dark:from-gray-900/90 dark:to-gray-900/20"
+      ></div>
+      <div class="container mx-auto px-4 py-24 md:py-32 relative">
+        <div class="max-w-2xl">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            IT Support for People Who Don't Speak Tech
+          </h1>
+          <p class="text-xl mb-8">
+            We're your local, personal tech team — the ones you can actually
+            talk to. No jargon, no confusion, just solutions that work.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <button
+              class="bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:bg-primary/90 transition-colors font-medium"
+            >
+              Schedule a Consultation
+            </button>
+            <button
+              class="bg-white text-primary border border-primary px-6 py-3 !rounded-button whitespace-nowrap hover:bg-gray-50 transition-colors font-medium"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Value Proposition Banner -->
+    <section class="bg-white dark:bg-gray-900 py-12">
+      <div class="container mx-auto px-4">
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-8"
+        >
+          <div class="flex-1">
+            <h2 class="text-3xl font-bold mb-4">Tech Support Made Simple</h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300">
+              We explain technology in plain language and solve your problems
+              without the confusion. Local, reliable support when you need it
+              most.
+            </p>
+          </div>
+          <div class="flex-1 flex justify-end gap-8">
+            <div class="text-center">
+              <p class="text-4xl font-bold text-primary mb-2">7+</p>
+              <p class="text-gray-600 dark:text-gray-300">Years in Business</p>
+            </div>
+            <div class="text-center">
+              <p class="text-4xl font-bold text-primary mb-2">500+</p>
+              <p class="text-gray-600 dark:text-gray-300">Happy Clients</p>
+            </div>
+            <div class="text-center">
+              <p class="text-4xl font-bold text-primary mb-2">98%</p>
+              <p class="text-gray-600 dark:text-gray-300">Issue Resolution</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Core Services Grid -->
+    <section id="services" class="py-16 bg-gray-50 dark:bg-gray-800">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">Our Services</h2>
+          <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Comprehensive tech support for all your needs, delivered with
+            clarity and care.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div
+            class="bg-white rounded shadow-md p-6 hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-computer-line ri-xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">
+              Tech Setup & Troubleshooting
+            </h3>
+            <ul class="text-gray-600 mb-4 space-y-2">
+              <li class="flex items-start gap-2">
+                <i class="ri-check-line text-primary mt-1"></i>
+                <span>Full office or home tech setup</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="ri-check-line text-primary mt-1"></i>
+                <span>Fixing slow computers and network issues</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="ri-check-line text-primary mt-1"></i>
+                <span>Remote or in-person support options</span>
+              </li>
+            </ul>
+            <a
+              href="#"
+              class="text-primary font-medium flex items-center gap-1 hover:underline service-link"
+            >
+              Learn more
+              <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+          <!-- Service 2 -->
+          <div
+            class="bg-white rounded shadow-md p-6 hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-building-line ri-xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">
+              Small Business Tech Support
+            </h3>
+            <ul class="text-gray-600 mb-4 space-y-2">
+              <li class="flex items-start gap-2">
+                <i class="ri-check-line text-primary mt-1"></i>
+                <span>Google Workspace and Microsoft 365 setup</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="ri-check-line text-primary mt-1"></i>
+                <span>Cloud storage and team collaboration tools</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="ri-check-line text-primary mt-1"></i>
+                <span>Password management and user onboarding</span>
+              </li>
+            </ul>
+            <a
+              href="#"
+              class="text-primary font-medium flex items-center gap-1 hover:underline service-link"
+            >
+              Learn more
+              <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+          <!-- Service 3 -->
+          <div
+            class="bg-white rounded shadow-md p-6 hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-shield-check-line ri-xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Cybersecurity Basics</h3>
+            <ul class="text-gray-600 mb-4 space-y-2">
+              <li class="flex items-start gap-2">
+                <i class="ri-check-line text-primary mt-1"></i>
+                <span>Router and firewall configuration</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="ri-check-line text-primary mt-1"></i>
+                <span>Antivirus and malware protection</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="ri-check-line text-primary mt-1"></i>
+                <span>Data security best practices</span>
+              </li>
+            </ul>
+            <a
+              href="#"
+              class="text-primary font-medium flex items-center gap-1 hover:underline service-link"
+            >
+              Learn more
+              <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+          <!-- Service 4 -->
+          <div
+            class="bg-white rounded shadow-md p-6 hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-book-open-line ri-xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">
+              Tech Education & Advisory
+            </h3>
+            <ul class="text-gray-600 mb-4 space-y-2">
+              <li class="flex items-start gap-2">
+                <i class="ri-check-line text-primary mt-1"></i>
+                <span>Plain language explanations, no jargon</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="ri-check-line text-primary mt-1"></i>
+                <span>Guidance you can understand and trust</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="ri-check-line text-primary mt-1"></i>
+                <span>Ask us anything tech-related</span>
+              </li>
+            </ul>
+            <a
+              href="#"
+              class="text-primary font-medium flex items-center gap-1 hover:underline service-link"
+            >
+              Learn more
+              <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+          <!-- Service 5 -->
+          <div
+            class="bg-white rounded shadow-md p-6 hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-global-line ri-xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">
+              Website Help & Digital Presence
+            </h3>
+            <ul class="text-gray-600 mb-4 space-y-2">
+              <li class="flex items-start gap-2">
+                <i class="ri-check-line text-primary mt-1"></i>
+                <span>Basic websites for small businesses</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="ri-check-line text-primary mt-1"></i>
+                <span>Domain, email, and branding setup</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="ri-check-line text-primary mt-1"></i>
+                <span>Help with getting found online</span>
+              </li>
+            </ul>
+            <a
+              href="#"
+              class="text-primary font-medium flex items-center gap-1 hover:underline service-link"
+            >
+              Learn more
+              <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+          <!-- Service 6 - CTA Card -->
+          <div
+            class="bg-primary text-white rounded shadow-md p-6 hover:shadow-lg transition-shadow flex flex-col justify-center"
+          >
+            <h3 class="text-xl font-semibold mb-3">Need something specific?</h3>
+            <p class="mb-6">
+              We offer customized solutions for your unique tech challenges.
+              Just ask!
+            </p>
+            <button
+              class="bg-white text-primary px-5 py-2 !rounded-button whitespace-nowrap hover:bg-gray-100 transition-colors font-medium self-start mt-auto"
+            >
+              Contact Us
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">Why People Choose Us</h2>
+          <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            We're different from typical IT support companies. Here's how:
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Reason 1 -->
+          <div
+            class="bg-gray-50 dark:bg-gray-800 rounded p-6 flex flex-col items-center text-center dark:shadow-gray-800"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-wallet-3-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Affordable & Honest</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Fair pricing with no hidden fees or unnecessary upsells. We
+              recommend only what you truly need.
+            </p>
+          </div>
+          <!-- Reason 2 -->
+          <div
+            class="bg-gray-50 dark:bg-gray-800 rounded p-6 flex flex-col items-center text-center dark:shadow-gray-800"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-chat-smile-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">We Speak Your Language</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              No confusing tech jargon. We explain everything in plain, simple
+              terms you can understand.
+            </p>
+          </div>
+          <!-- Reason 3 -->
+          <div
+            class="bg-gray-50 dark:bg-gray-800 rounded p-6 flex flex-col items-center text-center dark:shadow-gray-800"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-team-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Real Problem-Solvers</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              We're a team of creative thinkers who find solutions, not a
+              helpdesk reading from scripts.
+            </p>
+          </div>
+        </div>
+        <!-- Testimonial -->
+        <div class="mt-16 bg-gray-50 rounded-lg p-8">
+          <div class="flex flex-col md:flex-row gap-8 items-center">
+            <div class="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20middle-aged%20woman%20with%20short%20brown%20hair%20and%20glasses%2C%20smiling%20warmly%20at%20the%20camera.%20She%20is%20wearing%20business%20casual%20attire%20with%20a%20blue%20blouse.%20The%20background%20is%20neutral%20and%20the%20lighting%20is%20soft%20and%20flattering.%20The%20image%20has%20a%20professional%2C%20approachable%20quality.&width=200&height=200&seq=12346&orientation=squarish"
+                alt="Sarah Johnson"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div>
+              <p class="text-lg italic mb-4">
+                "PlainTech has been a lifesaver for our dental practice. They
+                explain everything in terms we understand, respond quickly when
+                we need help, and have never tried to sell us technology we
+                don't need. It's refreshing to work with IT people who treat you
+                like a human being."
+              </p>
+              <div>
+                <p class="font-semibold">Dr. Sarah Johnson</p>
+                <p class="text-gray-600">Brightsmile Dental Care</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Target Audience Section -->
+    <section id="clients" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">Who We Help</h2>
+          <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Our services are perfect for those who need reliable tech support
+            without the complexity.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Client Type 1 -->
+          <div
+            class="bg-white dark:bg-gray-900 rounded shadow-sm p-6 hover:shadow-md transition-shadow"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-store-line ri-xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Small Businesses</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Local shops, service providers, and small offices without in-house
+              IT departments.
+            </p>
+          </div>
+          <!-- Client Type 2 -->
+          <div
+            class="bg-white dark:bg-gray-900 rounded shadow-sm p-6 hover:shadow-md transition-shadow"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-home-office-line ri-xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Home Offices</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Remote workers, freelancers, and professionals working from home
+              needing reliable setups.
+            </p>
+          </div>
+          <!-- Client Type 3 -->
+          <div
+            class="bg-white dark:bg-gray-900 rounded shadow-sm p-6 hover:shadow-md transition-shadow"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-mental-health-line ri-xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Healthcare Providers</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Therapists, dentists, chiropractors, and other practitioners
+              requiring secure, reliable systems.
+            </p>
+          </div>
+          <!-- Client Type 4 -->
+          <div
+            class="bg-white dark:bg-gray-900 rounded shadow-sm p-6 hover:shadow-md transition-shadow"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-user-smile-line ri-xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Individuals</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              People who "just want it to work" and need friendly, patient tech
+              guidance.
+            </p>
+          </div>
+        </div>
+        <!-- Client Stories -->
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div
+            class="bg-white dark:bg-gray-900 rounded shadow-sm p-6 dark:shadow-gray-800"
+          >
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+                <img
+                  src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20middle-aged%20man%20with%20salt%20and%20pepper%20hair%20wearing%20a%20blue%20button-up%20shirt.%20He%20has%20a%20friendly%20smile%20and%20is%20looking%20directly%20at%20the%20camera.%20The%20background%20is%20neutral%20and%20the%20lighting%20is%20soft%20and%20professional.&width=100&height=100&seq=12347&orientation=squarish"
+                  alt="Robert Chen"
+                  class="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div>
+                <p class="font-semibold">Robert Chen</p>
+                <p class="text-gray-600">Chen Family Plumbing</p>
+              </div>
+            </div>
+            <p class="text-gray-700 italic">
+              "When our office network kept dropping connections, PlainTech not
+              only fixed the issue but also set up a better system that hasn't
+              failed us since. They explained everything in terms I could
+              understand and didn't try to oversell us on unnecessary
+              equipment."
+            </p>
+          </div>
+          <div
+            class="bg-white dark:bg-gray-900 rounded shadow-sm p-6 dark:shadow-gray-800"
+          >
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+                <img
+                  src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20woman%20in%20her%2040s%20with%20shoulder-length%20blonde%20hair%2C%20wearing%20professional%20attire%20with%20a%20light-colored%20blouse.%20She%20has%20a%20warm%2C%20approachable%20smile%20and%20is%20looking%20directly%20at%20the%20camera.%20The%20background%20is%20neutral%20and%20the%20lighting%20is%20soft%20and%20flattering.&width=100&height=100&seq=12348&orientation=squarish"
+                  alt="Jennifer Martinez"
+                  class="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div>
+                <p class="font-semibold">Jennifer Martinez</p>
+                <p class="text-gray-600">Harmony Therapy Practice</p>
+              </div>
+            </div>
+            <p class="text-gray-700 italic">
+              "As a therapist, I needed secure video conferencing and client
+              management systems that protect privacy. PlainTech set everything
+              up, trained me on how to use it, and is always available when I
+              have questions. They've been invaluable to my practice."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Service Partner Section -->
+    <section class="py-16 bg-white dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row gap-12 items-center">
+          <div class="flex-1">
+            <h2 class="text-3xl font-bold mb-4">
+              Website & Digital Presence Solutions
+            </h2>
+            <p class="text-lg text-gray-600 mb-6">
+              Through our partnership with an India-based design team, we offer
+              affordable, professional website solutions tailored for small
+              businesses.
+            </p>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-start gap-3">
+                <div
+                  class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5"
+                >
+                  <i class="ri-check-line text-primary"></i>
+                </div>
+                <div>
+                  <p class="font-medium">Basic Business Websites</p>
+                  <p class="text-gray-600">
+                    Clean, professional sites that look great on all devices
+                  </p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <div
+                  class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5"
+                >
+                  <i class="ri-check-line text-primary"></i>
+                </div>
+                <div>
+                  <p class="font-medium">Digital Setup</p>
+                  <p class="text-gray-600">
+                    Domain registration, email configuration, and Google
+                    Business profiles
+                  </p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <div
+                  class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5"
+                >
+                  <i class="ri-check-line text-primary"></i>
+                </div>
+                <div>
+                  <p class="font-medium">Local SEO Basics</p>
+                  <p class="text-gray-600">
+                    Help getting found by local customers searching online
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <button
+              class="bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:bg-primary/90 transition-colors font-medium"
+            >
+              Learn More About Web Services
+            </button>
+          </div>
+          <div class="flex-1">
+            <div class="grid grid-cols-2 gap-4">
+              <img
+                src="https://readdy.ai/api/search-image?query=Clean%2C%20modern%20small%20business%20website%20design%20for%20a%20cafe%20or%20restaurant.%20The%20website%20has%20a%20simple%2C%20elegant%20layout%20with%20high-quality%20food%20photography%2C%20a%20clean%20menu%20display%2C%20and%20intuitive%20navigation.%20The%20design%20is%20minimalist%20with%20plenty%20of%20whitespace%20and%20a%20professional%20appearance.&width=300&height=200&seq=12349&orientation=landscape"
+                alt="Website Example 1"
+                class="rounded shadow-sm w-full h-auto object-cover object-top"
+              />
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%20service%20business%20website%20design%20for%20a%20therapist%20or%20consultant.%20The%20website%20has%20a%20clean%2C%20calming%20layout%20with%20soft%20colors%2C%20professional%20headshot%20photography%2C%20service%20descriptions%2C%20and%20a%20contact%20form.%20The%20design%20is%20simple%2C%20trustworthy%2C%20and%20approachable.&width=300&height=200&seq=12350&orientation=landscape"
+                alt="Website Example 2"
+                class="rounded shadow-sm w-full h-auto object-cover object-top"
+              />
+              <img
+                src="https://readdy.ai/api/search-image?query=Small%20retail%20business%20website%20design%20for%20a%20boutique%20or%20shop.%20The%20website%20has%20a%20clean%20product%20display%2C%20simple%20navigation%2C%20and%20professional%20product%20photography.%20The%20design%20is%20modern%2C%20minimal%2C%20and%20focuses%20on%20showcasing%20products%20effectively.&width=300&height=200&seq=12351&orientation=landscape"
+                alt="Website Example 3"
+                class="rounded shadow-sm w-full h-auto object-cover object-top"
+              />
+              <img
+                src="https://readdy.ai/api/search-image?query=Tradesperson%20or%20home%20service%20business%20website%20design%20for%20a%20plumber%20or%20electrician.%20The%20website%20has%20a%20clean%20layout%20with%20service%20descriptions%2C%20testimonials%2C%20and%20contact%20information%20prominently%20displayed.%20The%20design%20is%20professional%2C%20trustworthy%2C%20and%20easy%20to%20navigate.&width=300&height=200&seq=12352&orientation=landscape"
+                alt="Website Example 4"
+                class="rounded shadow-sm w-full h-auto object-cover object-top"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50 dark:bg-gray-800">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row gap-12">
+          <div class="flex-1">
+            <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
+            <p class="text-lg text-gray-600 mb-8">
+              Have a tech problem or question? We're here to help. Reach out and
+              we'll get back to you quickly.
+            </p>
+            <div class="space-y-6 mb-8">
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="ri-phone-line text-primary"></i>
+                </div>
+                <div>
+                  <p class="font-medium">Phone</p>
+                  <p class="text-gray-600">(555) 123-4567</p>
+                  <p class="text-sm text-gray-500">
+                    Mon-Fri: 8am-6pm, Sat: 9am-1pm
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="ri-mail-line text-primary"></i>
+                </div>
+                <div>
+                  <p class="font-medium">Email</p>
+                  <p class="text-gray-600">help@plaintechsolutions.com</p>
+                  <p class="text-sm text-gray-500">
+                    We respond within 24 hours
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="ri-map-pin-line text-primary"></i>
+                </div>
+                <div>
+                  <p class="font-medium">Location</p>
+                  <p class="text-gray-600">123 Main Street, Suite 101</p>
+                  <p class="text-gray-600">Anytown, CA 90210</p>
+                  <p class="text-sm text-gray-500">
+                    Serving clients within 25 miles
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <p class="font-medium mb-2">Emergency Support</p>
+              <p class="text-gray-600 mb-4">
+                For urgent issues outside business hours, existing clients can
+                reach our emergency line at (555) 987-6543.
+              </p>
+            </div>
+          </div>
+          <div class="flex-1">
+            <div
+              class="bg-white dark:bg-gray-900 rounded shadow-sm p-6 dark:shadow-gray-800"
+            >
+              <h3 class="text-xl font-semibold mb-6">Send Us a Message</h3>
+              <form>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label
+                      for="name"
+                      class="block text-sm font-medium text-gray-700 mb-1"
+                      >Name</label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      class="w-full px-4 py-2 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                      placeholder="Your name"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="email"
+                      class="block text-sm font-medium text-gray-700 mb-1"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      class="w-full px-4 py-2 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary"
+                      placeholder="Your email"
+                    />
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <label
+                    for="phone"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Phone (optional)</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary"
+                    placeholder="Your phone number"
+                  />
+                </div>
+                <div class="mb-4">
+                  <label
+                    for="subject"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Subject</label
+                  >
+                  <input
+                    type="text"
+                    id="subject"
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary"
+                    placeholder="What can we help you with?"
+                  />
+                </div>
+                <div class="mb-6">
+                  <label
+                    for="message"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    rows="4"
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary"
+                    placeholder="Tell us about your tech issue or question"
+                  ></textarea>
+                </div>
+                <div class="flex items-center mb-6">
+                  <div class="relative inline-block w-10 h-6 mr-2">
+                    <input
+                      type="checkbox"
+                      id="newsletter"
+                      class="opacity-0 w-0 h-0"
+                    />
+                    <span
+                      class="absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-gray-300 rounded-full transition-all duration-300 before:absolute before:h-4 before:w-4 before:left-1 before:bottom-1 before:bg-white before:rounded-full before:transition-all before:duration-300 peer-checked:bg-primary peer-checked:before:translate-x-4"
+                    ></span>
+                  </div>
+                  <label for="newsletter" class="text-sm text-gray-700"
+                    >Subscribe to our monthly tech tips newsletter</label
+                  >
+                </div>
+                <button
+                  type="submit"
+                  class="w-full bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:bg-primary/90 transition-colors font-medium"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <a href="#" class="flex items-center gap-2 mb-4">
+              <span class="text-2xl font-['Pacifico'] text-white"
+                >PlainTech</span
+              >
+              <span class="text-lg font-semibold">Solutions</span>
+            </a>
+            <p class="text-gray-400 mb-4">
+              IT services for people who don't speak tech — and don't want to.
+            </p>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="w-8 h-8 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors"
+              >
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors"
+              >
+                <i class="ri-twitter-x-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors"
+              >
+                <i class="ri-linkedin-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors"
+              >
+                <i class="ri-instagram-fill"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Services</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Tech Setup & Troubleshooting</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Small Business Tech Support</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Cybersecurity Basics</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Tech Education</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Website Solutions</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Company</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Our Team</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Testimonials</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Careers</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Contact</h4>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-3">
+                <i class="ri-map-pin-line mt-1"></i>
+                <span class="text-gray-400"
+                  >123 Main Street, Suite 101<br />Anytown, CA 90210</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="ri-phone-line mt-1"></i>
+                <span class="text-gray-400">(555) 123-4567</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="ri-mail-line mt-1"></i>
+                <span class="text-gray-400">help@plaintechsolutions.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+          <p class="text-gray-400 text-sm">
+            © 2025 PlainTech Solutions. All rights reserved.
+          </p>
+          <div class="flex gap-4">
+            <a
+              href="#"
+              class="text-gray-400 text-sm hover:text-white transition-colors"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="text-gray-400 text-sm hover:text-white transition-colors"
+              >Terms of Service</a
+            >
+            <a
+              href="#"
+              class="text-gray-400 text-sm hover:text-white transition-colors"
+              >Sitemap</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div
+      id="modal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50"
+    >
+      <div class="bg-white rounded-lg p-8 max-w-lg w-full mx-4 relative">
+        <button
+          id="closeModal"
+          class="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+        >
+          <i class="ri-close-line ri-lg"></i>
+        </button>
+        <h3 class="text-2xl font-semibold mb-4" id="modalTitle">Page Title</h3>
+        <div id="modalContent" class="prose max-w-none">
+          <p>Content will be loaded here...</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Dark mode toggle functionality
+        const darkModeToggle = document.getElementById("darkModeToggle");
+        const htmlElement = document.documentElement;
+        // Check for saved dark mode preference
+        if (localStorage.getItem("darkMode") === "enabled") {
+          htmlElement.classList.add("dark");
+          document.body.classList.add("dark");
+        }
+        darkModeToggle.addEventListener("click", () => {
+          htmlElement.classList.toggle("dark");
+          document.body.classList.toggle("dark");
+          // Save preference
+          if (htmlElement.classList.contains("dark")) {
+            localStorage.setItem("darkMode", "enabled");
+          } else {
+            localStorage.setItem("darkMode", null);
+          }
+        });
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+            const target = document.querySelector(targetId);
+            if (target) {
+              target.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          });
+        });
+        // Newsletter toggle
+        const newsletterCheckbox = document.getElementById("newsletter");
+        if (newsletterCheckbox) {
+          newsletterCheckbox.addEventListener("change", function () {
+            const toggleSpan = this.nextElementSibling;
+            if (this.checked) {
+              toggleSpan.classList.add(
+                "peer-checked:bg-primary",
+                "peer-checked:before:translate-x-4",
+              );
+            } else {
+              toggleSpan.classList.remove(
+                "peer-checked:bg-primary",
+                "peer-checked:before:translate-x-4",
+              );
+            }
+          });
+        }
+        // Modal handling
+        const modal = document.getElementById("modal");
+        const closeModal = document.getElementById("closeModal");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalContent = document.getElementById("modalContent");
+        // Handle all footer and service links
+        document.querySelectorAll("footer a, .service-link").forEach((link) => {
+          link.addEventListener("click", function (e) {
+            const href = this.getAttribute("href");
+            if (href === "#") {
+              e.preventDefault();
+              const title = this.textContent;
+              modalTitle.textContent = title;
+              // Simulate content based on link text
+              let content = `<p class="mb-4">This is the ${title} page content. We're working on making this content available soon.</p>`;
+              content += `<p class="mb-4">For immediate assistance or more information about ${title.toLowerCase()}, please contact our team:</p>`;
+              content += `<ul class="list-disc pl-5 mb-4">
+      <li>Call us: (555) 123-4567</li>
+      <li>Email: help@plaintechsolutions.com</li>
+      <li>Visit our office during business hours</li>
+      </ul>`;
+              modalContent.innerHTML = content;
+              modal.classList.remove("hidden");
+              modal.classList.add("flex");
+            }
+          });
+        });
+        // Close modal
+        closeModal.addEventListener("click", () => {
+          modal.classList.add("hidden");
+          modal.classList.remove("flex");
+        });
+        // Close modal when clicking outside
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) {
+            modal.classList.add("hidden");
+            modal.classList.remove("flex");
+          }
+        });
+        // Handle form submission
+        const contactForm = document.querySelector("form");
+        if (contactForm) {
+          contactForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            // Show success message
+            modalTitle.textContent = "Message Sent";
+            modalContent.innerHTML = `
+      <div class="text-center">
+      <div class="w-16 h-16 bg-green-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+      <i class="ri-check-line ri-2x text-green-500"></i>
+      </div>
+      <p class="text-lg mb-4">Thank you for contacting us! We'll get back to you within 24 hours.</p>
+      <p class="text-gray-600">A confirmation email has been sent to ${formData.get("email")}</p>
+      </div>
+      `;
+            modal.classList.remove("hidden");
+            modal.classList.add("flex");
+            this.reset();
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
+
