@@ -4,6 +4,10 @@ Welcome to the PlainTech Solutions website project. This site is built using mod
 
 ---
 
+## Name Idea
+
+---
+
 ## 📁 Project Structure
 
 This project uses a modular file structure to separate concerns and make it easier to work on different sections of the site.
