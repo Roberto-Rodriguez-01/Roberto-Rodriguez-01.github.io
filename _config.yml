@@ -1,0 +1,10 @@
+title: PlainTech Solutions
+description: A local Jekyll dev site
+markdown: kramdown
+theme: null
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - README.md
+
