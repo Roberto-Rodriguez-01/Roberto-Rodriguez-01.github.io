@@ -2,9 +2,7 @@
 
 Welcome to the PlainTech Solutions website project. This site is built using modular HTML with Tailwind CSS, and is designed to be clean, modern, and easy to maintain.
 
----
-
-## Name Idea
+## Name Ideas
 
 ## 📁 Project Structure
 
