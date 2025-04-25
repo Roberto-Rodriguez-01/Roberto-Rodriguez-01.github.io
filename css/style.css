@@ -1,0 +1,25 @@
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fafb;
+  color: #1f2937;
+  transition: background-color 0.3s, color 0.3s;
+}
+body.dark {
+  background-color: #111827;
+  color: #f3f4f6;
+}
+.hero-section {
+  background-image: url('https://readdy.ai/api/search-image?...'); /* truncate as needed */
+  background-size: cover;
+  background-position: center;
+}
+input:focus,
+button:focus {
+  outline: none;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
