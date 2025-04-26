@@ -2,6 +2,8 @@
 
 Welcome to the PlainTech Solutions website project. This site is built using modular HTML with Tailwind CSS, and is designed to be clean, modern, and easy to maintain.
 
+SiteLink: https://roberto-rodriguez-01.github.io/
+
 ## Name Ideas
 
 ## 📁 Project Structure
@@ -60,6 +62,14 @@ plaintech-site/
 - Make sure to test **mobile responsiveness** for any new content.
 - When adding new styles, try using Tailwind utilities first. Add to `style.css` only if necessary.
 - If updating Tailwind config, do so in `js/tailwind.config.js`.
+- To install Jekyll and run the sever? do the following:
+  - download Ruby & RubyGems
+  - download Node.js and Yarn (needed for certain plugins like TailwindCSS)
+  - once ruby is installed install Bundler & Jekyll
+    - `gem install bundler jekyll`
+  - cd into the site folder
+  - bundle install
+  - bundle exec jekyll serve
 
 ## 📦 Deployment
 
