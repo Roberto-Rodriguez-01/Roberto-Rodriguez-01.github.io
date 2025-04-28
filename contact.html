@@ -1,0 +1,163 @@
+---
+layout: default
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+  </head>
+  <body class="min-h-screen transition-colors duration-300">
+    {% include header.html %}
+    
+    <!-- Contact Hero Section -->
+    <section class="bg-gray-50 dark:bg-gray-800 py-16">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="text-4xl font-bold mb-6">Contact Us</h1>
+          <p class="text-xl text-gray-600 dark:text-gray-300">
+            Have a tech problem or question? We're here to help. Reach out and we'll get back to you quickly.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Contact Section -->
+    <section class="py-16 bg-white dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row gap-12">
+          <!-- Contact Information -->
+          <div class="flex-1">
+            <h2 class="text-3xl font-bold mb-8">Get in Touch</h2>
+            <div class="space-y-8">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <i class="ri-phone-line text-primary ri-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold mb-2">Phone Support</h3>
+                  <p class="text-gray-600 dark:text-gray-300">(555) 123-4567</p>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">
+                    Mon-Fri: 8am-6pm, Sat: 9am-1pm
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <i class="ri-mail-line text-primary ri-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold mb-2">Email Us</h3>
+                  <p class="text-gray-600 dark:text-gray-300">help@plaintechsolutions.com</p>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">
+                    We respond within 24 hours
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <i class="ri-map-pin-line text-primary ri-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold mb-2">Visit Us</h3>
+                  <p class="text-gray-600 dark:text-gray-300">123 Main Street, Suite 101</p>
+                  <p class="text-gray-600 dark:text-gray-300">Anytown, CA 90210</p>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">
+                    Serving clients within 25 miles
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <i class="ri-customer-service-line text-primary ri-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold mb-2">Emergency Support</h3>
+                  <p class="text-gray-600 dark:text-gray-300">(555) 987-6543</p>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">
+                    For urgent issues outside business hours
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="flex-1">
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-sm p-8">
+              <h2 class="text-2xl font-bold mb-6">Send Us a Message</h2>
+              <form>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Name</label>
+                    <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="Your name" required>
+                  </div>
+                  <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
+                    <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="Your email" required>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <label for="phone" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Phone (optional)</label>
+                  <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="Your phone number">
+                </div>
+                <div class="mb-4">
+                  <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Subject</label>
+                  <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="What can we help you with?" required>
+                </div>
+                <div class="mb-6">
+                  <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Message</label>
+                  <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="Tell us about your tech issue or question" required></textarea>
+                </div>
+                <div class="flex items-center mb-6">
+                  <div class="relative inline-block w-10 h-6 mr-2">
+                    <input type="checkbox" id="newsletter" class="opacity-0 w-0 h-0">
+                    <span class="absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-gray-300 rounded-full transition-all duration-300 before:absolute before:h-4 before:w-4 before:left-1 before:bottom-1 before:bg-white before:rounded-full before:transition-all before:duration-300 peer-checked:bg-primary peer-checked:before:translate-x-4 dark:bg-gray-700"></span>
+                  </div>
+                  <label for="newsletter" class="text-sm text-gray-700 dark:text-gray-300">Subscribe to our monthly tech tips newsletter</label>
+                </div>
+                <button type="submit" class="w-full bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:bg-primary/90 transition-colors font-medium">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50 dark:bg-gray-800">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-sm">
+              <h3 class="text-xl font-semibold mb-2">What are your business hours?</h3>
+              <p class="text-gray-600 dark:text-gray-300">We're available Monday through Friday from 8am to 6pm, and Saturdays from 9am to 1pm.</p>
+            </div>
+            <div class="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-sm">
+              <h3 class="text-xl font-semibold mb-2">How quickly can you respond to my request?</h3>
+              <p class="text-gray-600 dark:text-gray-300">We typically respond to all inquiries within 24 hours. For urgent issues, please call our emergency support line.</p>
+            </div>
+            <div class="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-sm">
+              <h3 class="text-xl font-semibold mb-2">Do you offer remote support?</h3>
+              <p class="text-gray-600 dark:text-gray-300">Yes, we provide both remote and in-person support options depending on your needs and location.</p>
+            </div>
+            <div class="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-sm">
+              <h3 class="text-xl font-semibold mb-2">What areas do you serve?</h3>
+              <p class="text-gray-600 dark:text-gray-300">We primarily serve clients within a 25-mile radius of our office, but we can provide remote support to clients anywhere.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% include footer.html %}
+    {% include modal.html %}
+    <script src="js/main.js"></script>
+  </body>
+</html> 
