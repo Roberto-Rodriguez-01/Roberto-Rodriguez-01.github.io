@@ -67,9 +67,9 @@ plaintech-site/
   - download Node.js and Yarn (needed for certain plugins like TailwindCSS)
   - once ruby is installed install Bundler & Jekyll
     - `gem install bundler jekyll`
-  - cd into the site folder
-  - bundle install
-  - bundle exec jekyll serve
+  - `cd` into the site folder
+  - `bundle install`
+  - `bundle exec jekyll serve`
 
 ## 📦 Deployment
 
