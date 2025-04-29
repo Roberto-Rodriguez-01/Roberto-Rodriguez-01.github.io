@@ -9,7 +9,7 @@ layout: default
   </head>
   <body class="min-h-screen transition-colors duration-300">
     {% include header.html %}
-    
+
     <!-- Contact Hero Section -->
     <section class="bg-gray-50 dark:bg-gray-800 py-16">
       <div class="container mx-auto px-4">
@@ -22,14 +22,16 @@ layout: default
       </div>
     </section>
 
-    <!-- Main Contact Section -->
+    <!-- Main Contact Section with Form and Info side by side -->
     <section class="py-16 bg-white dark:bg-gray-900">
       <div class="container mx-auto px-4">
         <div class="flex flex-col md:flex-row gap-12">
-          <!-- Contact Information -->
+
+          <!-- Contact Information (LEFT SIDE) -->
           <div class="flex-1">
             <h2 class="text-3xl font-bold mb-8">Get in Touch</h2>
             <div class="space-y-8">
+              <!-- Phone -->
               <div class="flex items-start gap-4">
                 <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                   <i class="ri-phone-line text-primary ri-xl"></i>
@@ -37,12 +39,10 @@ layout: default
                 <div>
                   <h3 class="text-xl font-semibold mb-2">Phone Support</h3>
                   <p class="text-gray-600 dark:text-gray-300">(555) 123-4567</p>
-                  <p class="text-sm text-gray-500 dark:text-gray-400">
-                    Mon-Fri: 8am-6pm, Sat: 9am-1pm
-                  </p>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">Mon-Fri: 8am-6pm, Sat: 9am-1pm</p>
                 </div>
               </div>
-
+              <!-- Email -->
               <div class="flex items-start gap-4">
                 <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                   <i class="ri-mail-line text-primary ri-xl"></i>
@@ -50,12 +50,10 @@ layout: default
                 <div>
                   <h3 class="text-xl font-semibold mb-2">Email Us</h3>
                   <p class="text-gray-600 dark:text-gray-300">help@plaintechsolutions.com</p>
-                  <p class="text-sm text-gray-500 dark:text-gray-400">
-                    We respond within 24 hours
-                  </p>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">We respond within 24 hours</p>
                 </div>
               </div>
-
+              <!-- Address -->
               <div class="flex items-start gap-4">
                 <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                   <i class="ri-map-pin-line text-primary ri-xl"></i>
@@ -64,12 +62,10 @@ layout: default
                   <h3 class="text-xl font-semibold mb-2">Visit Us</h3>
                   <p class="text-gray-600 dark:text-gray-300">123 Main Street, Suite 101</p>
                   <p class="text-gray-600 dark:text-gray-300">Anytown, CA 90210</p>
-                  <p class="text-sm text-gray-500 dark:text-gray-400">
-                    Serving clients within 25 miles
-                  </p>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">Serving clients within 25 miles</p>
                 </div>
               </div>
-
+              <!-- Emergency -->
               <div class="flex items-start gap-4">
                 <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                   <i class="ri-customer-service-line text-primary ri-xl"></i>
@@ -77,59 +73,31 @@ layout: default
                 <div>
                   <h3 class="text-xl font-semibold mb-2">Emergency Support</h3>
                   <p class="text-gray-600 dark:text-gray-300">(555) 987-6543</p>
-                  <p class="text-sm text-gray-500 dark:text-gray-400">
-                    For urgent issues outside business hours
-                  </p>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">For urgent issues outside business hours</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Contact Form -->
-          <div class="flex-1">
-            <div class="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-sm p-8">
-              <h2 class="text-2xl font-bold mb-6">Send Us a Message</h2>
-              <form action="https://formspree.io/f/{form_id}" method="POST">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                  <div>
-                    <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Name</label>
-                    <input type="text" id="name" name="Name" class="w-full px-4 py-2 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="Your name" required>
-                  </div>
-                  <div>
-                    <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
-                    <input type="email" id="email" name="Email" class="w-full px-4 py-2 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="Your email" required>
-                  </div>
-                </div>
-                <div class="mb-4">
-                  <label for="phone" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Phone (optional)</label>
-                  <input type="tel" id="phone" name="Phone" class="w-full px-4 py-2 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="Your phone number">
-                </div>
-                <div class="mb-4">
-                  <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Subject</label>
-                  <input type="text" id="subject" name="Subject" class="w-full px-4 py-2 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="What can we help you with?" required>
-                </div>
-                <div class="mb-6">
-                  <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Message</label>
-                  <textarea id="message" name="Message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="Tell us about your tech issue or question" required></textarea>
-                </div>
-                <div class="flex items-center mb-6">
-                  <div class="relative inline-block w-10 h-6 mr-2">
-                    <input type="checkbox" id="newsletter" name="Newsletter" class="opacity-0 w-0 h-0">
-                    <span class="absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-gray-300 rounded-full transition-all duration-300 before:absolute before:h-4 before:w-4 before:left-1 before:bottom-1 before:bg-white before:rounded-full before:transition-all before:duration-300 peer-checked:bg-primary peer-checked:before:translate-x-4 dark:bg-gray-700"></span>
-                  </div>
-                  <label for="newsletter" class="text-sm text-gray-700 dark:text-gray-300">Subscribe to our monthly tech tips newsletter</label>
-                </div>
-                <button type="submit" class="w-full bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:bg-primary/90 transition-colors font-medium">
-                  Send Message
+          <!-- Interactive Form (RIGHT SIDE) -->
+          <div class="flex-1 bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl shadow-xl">
+            <h2 class="text-3xl font-bold mb-8">Let's Get You Some Help!</h2>
+            <div id="chat-area" class="flex flex-col gap-4 overflow-y-auto max-h-[60vh] p-4 bg-white dark:bg-gray-900 rounded-lg mb-6"></div>
+            <div id="input-area" class="flex flex-col space-y-4">
+              <p id="question-text" class="text-xl text-gray-700 dark:text-gray-300 font-semibold text-left">What's your name?</p>
+              <div class="flex gap-2">
+                <input type="text" id="answer-input" class="flex-1 px-4 py-2 border rounded-full focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white transition">
+                <button onclick="nextQuestion()" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/90 transition font-semibold">
+                  Send
                 </button>
-              </form>
+              </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
-    <footer>
-      {% include footer.html %}
-    </footer>
+    {% include footer.html %}
+    <script src="/js/contactpage.js"></script>
   </body>
 </html>
