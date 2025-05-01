@@ -2,74 +2,63 @@
 layout: default
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    {% include head.html %}
-  </head>
-  <body class="min-h-screen transition-colors duration-300">
-    {% include header.html %}
-    <section id="clients" class="py-16 bg-gray-50 dark:bg-gray-800">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold mb-4">Who We Help</h2>
-          <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            We work with everyday people and small teams who just need technology to work
-            — no buzzwords, no stress. Whether you're running a local business 
-            or just trying to get your printer online, we're here to make tech make sense.
-          </p>
+<section id="clients" class="py-16 bg-gray-50 dark:bg-gray-800">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold mb-4">Who We Help</h2>
+      <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+        We work with everyday people and small teams who just need technology to work
+        — no buzzwords, no stress. Whether you're running a local business 
+        or just trying to get your printer online, we're here to make tech make sense.
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Client Type 1 -->
+      <div class="bg-white dark:bg-gray-900 rounded shadow-sm p-6 hover:shadow-md transition-shadow">
+        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+          <i class="ri-store-line ri-xl text-primary"></i>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- Client Type 1 -->
-          <div class="bg-white dark:bg-gray-900 rounded shadow-sm p-6 hover:shadow-md transition-shadow">
-            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-              <i class="ri-store-line ri-xl text-primary"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-3">Small Businesses</h3>
-            <p class="text-gray-600 dark:text-gray-300">
-              Local shops, service providers, and growing teams that need reliable IT
-            </p>
-          </div>
-          <!-- Client Type 2 -->
-          <div class="bg-white dark:bg-gray-900 rounded shadow-sm p-6 hover:shadow-md transition-shadow">
-            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-              <i class="ri-home-office-line ri-xl text-primary"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-3">Home Offices</h3>
-            <p class="text-gray-600 dark:text-gray-300">
-              Remote workers, freelancers, and home-based professionals 
-              who need dependable setups, secure networks, and tech that just works 
-              — so you can focus on getting things done.
-            </p>
-          </div>
-          <!-- Client Type 3 -->
-          <div class="bg-white dark:bg-gray-900 rounded shadow-sm p-6 hover:shadow-md transition-shadow">
-            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-              <i class="ri-mental-health-line ri-xl text-primary"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-3">Licensed Professionals</h3>
-            <p class="text-gray-600 dark:text-gray-300">
-              Therapists, accountants, legal experts, and other solo practitioners 
-              who need secure, compliant systems and dependable support 
-              — with zero tech headaches.
-            </p>
-          </div>
-          <!-- Client Type 4 -->
-          <div class="bg-white dark:bg-gray-900 rounded shadow-sm p-6 hover:shadow-md transition-shadow">
-            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-              <i class="ri-user-smile-line ri-xl text-primary"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-3">Individuals</h3>
-            <p class="text-gray-600 dark:text-gray-300">
-              Everyday users who want technology that works without the frustration. 
-              Whether it's a slow laptop, confusing Wi-Fi, or a smart home gone rogue 
-              — we're here to help.
-            </p>
-          </div>
-        </div>
+        <h3 class="text-xl font-semibold mb-3">Small Businesses</h3>
+        <p class="text-gray-600 dark:text-gray-300">
+          Local shops, service providers, and growing teams that need reliable IT
+        </p>
       </div>
-    </section>
-      {% include footer.html %}
-      {% include modal.html %}
-  </body>
-</html> 
+      <!-- Client Type 2 -->
+      <div class="bg-white dark:bg-gray-900 rounded shadow-sm p-6 hover:shadow-md transition-shadow">
+        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+          <i class="ri-home-office-line ri-xl text-primary"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Home Offices</h3>
+        <p class="text-gray-600 dark:text-gray-300">
+          Remote workers, freelancers, and home-based professionals 
+          who need dependable setups, secure networks, and tech that just works 
+          — so you can focus on getting things done.
+        </p>
+      </div>
+      <!-- Client Type 3 -->
+      <div class="bg-white dark:bg-gray-900 rounded shadow-sm p-6 hover:shadow-md transition-shadow">
+        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+          <i class="ri-mental-health-line ri-xl text-primary"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Licensed Professionals</h3>
+        <p class="text-gray-600 dark:text-gray-300">
+          Therapists, accountants, legal experts, and other solo practitioners 
+          who need secure, compliant systems and dependable support 
+          — with zero tech headaches.
+        </p>
+      </div>
+      <!-- Client Type 4 -->
+      <div class="bg-white dark:bg-gray-900 rounded shadow-sm p-6 hover:shadow-md transition-shadow">
+        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+          <i class="ri-user-smile-line ri-xl text-primary"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Individuals</h3>
+        <p class="text-gray-600 dark:text-gray-300">
+          Everyday users who want technology that works without the frustration. 
+          Whether it's a slow laptop, confusing Wi-Fi, or a smart home gone rogue 
+          — we're here to help.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

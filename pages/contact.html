@@ -2,102 +2,91 @@
 layout: default
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    {% include head.html %}
-  </head>
-  <body class="min-h-screen transition-colors duration-300">
-    {% include header.html %}
+<!-- Contact Hero Section -->
+<section class="bg-gray-50 dark:bg-gray-800 py-16">
+  <div class="container mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h1 class="text-4xl font-bold mb-6">Contact Us</h1>
+      <p class="text-xl text-gray-600 dark:text-gray-300">
+        Have a tech problem or question? We're here to help. Reach out and we'll get back to you quickly.
+      </p>
+    </div>
+  </div>
+</section>
 
-    <!-- Contact Hero Section -->
-    <section class="bg-gray-50 dark:bg-gray-800 py-16">
-      <div class="container mx-auto px-4">
-        <div class="max-w-3xl mx-auto text-center">
-          <h1 class="text-4xl font-bold mb-6">Contact Us</h1>
-          <p class="text-xl text-gray-600 dark:text-gray-300">
-            Have a tech problem or question? We're here to help. Reach out and we'll get back to you quickly.
-          </p>
-        </div>
-      </div>
-    </section>
+<!-- Main Contact Section with Form and Info side by side -->
+<section class="py-16 bg-white dark:bg-gray-900">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row gap-12">
 
-    <!-- Main Contact Section with Form and Info side by side -->
-    <section class="py-16 bg-white dark:bg-gray-900">
-      <div class="container mx-auto px-4">
-        <div class="flex flex-col md:flex-row gap-12">
-
-          <!-- Contact Information (LEFT SIDE) -->
-          <div class="flex-1">
-            <h2 class="text-3xl font-bold mb-8">Get in Touch</h2>
-            <div class="space-y-8">
-              <!-- Phone -->
-              <div class="flex items-start gap-4">
-                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <i class="ri-phone-line text-primary ri-xl"></i>
-                </div>
-                <div>
-                  <h3 class="text-xl font-semibold mb-2">Phone Support</h3>
-                  <p class="text-gray-600 dark:text-gray-300">(555) 123-4567</p>
-                  <p class="text-sm text-gray-500 dark:text-gray-400">Mon-Fri: 8am-6pm, Sat: 9am-1pm</p>
-                </div>
-              </div>
-              <!-- Email -->
-              <div class="flex items-start gap-4">
-                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <i class="ri-mail-line text-primary ri-xl"></i>
-                </div>
-                <div>
-                  <h3 class="text-xl font-semibold mb-2">Email Us</h3>
-                  <p class="text-gray-600 dark:text-gray-300">help@plaintechsolutions.com</p>
-                  <p class="text-sm text-gray-500 dark:text-gray-400">We respond within 24 hours</p>
-                </div>
-              </div>
-              <!-- Address -->
-              <div class="flex items-start gap-4">
-                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <i class="ri-map-pin-line text-primary ri-xl"></i>
-                </div>
-                <div>
-                  <h3 class="text-xl font-semibold mb-2">Visit Us</h3>
-                  <p class="text-gray-600 dark:text-gray-300">123 Main Street, Suite 101</p>
-                  <p class="text-gray-600 dark:text-gray-300">Anytown, CA 90210</p>
-                  <p class="text-sm text-gray-500 dark:text-gray-400">Serving clients within 25 miles</p>
-                </div>
-              </div>
-              <!-- Emergency -->
-              <div class="flex items-start gap-4">
-                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <i class="ri-customer-service-line text-primary ri-xl"></i>
-                </div>
-                <div>
-                  <h3 class="text-xl font-semibold mb-2">Emergency Support</h3>
-                  <p class="text-gray-600 dark:text-gray-300">(555) 987-6543</p>
-                  <p class="text-sm text-gray-500 dark:text-gray-400">For urgent issues outside business hours</p>
-                </div>
-              </div>
+      <!-- Contact Information (LEFT SIDE) -->
+      <div class="flex-1">
+        <h2 class="text-3xl font-bold mb-8">Get in Touch</h2>
+        <div class="space-y-8">
+          <!-- Phone -->
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="ri-phone-line text-primary ri-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Phone Support</h3>
+              <p class="text-gray-600 dark:text-gray-300">(555) 123-4567</p>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Mon-Fri: 8am-6pm, Sat: 9am-1pm</p>
             </div>
           </div>
-
-          <!-- Interactive Form (RIGHT SIDE) -->
-          <div class="flex-1 bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl shadow-xl">
-            <h2 class="text-3xl font-bold mb-8">Let's Get You Some Help!</h2>
-            <div id="chat-area" class="flex flex-col gap-4 overflow-y-auto max-h-[60vh] p-4 bg-white dark:bg-gray-900 rounded-lg mb-6"></div>
-            <div id="input-area" class="flex flex-col space-y-4">
-              <p id="question-text" class="text-xl text-gray-700 dark:text-gray-300 font-semibold text-left">What's your name?</p>
-              <div class="flex gap-2">
-                <input type="text" id="answer-input" class="flex-1 px-4 py-2 border rounded-full focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white transition">
-                <button onclick="nextQuestion()" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/90 transition font-semibold">
-                  Send
-                </button>
-              </div>
+          <!-- Email -->
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="ri-mail-line text-primary ri-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Email Us</h3>
+              <p class="text-gray-600 dark:text-gray-300">help@plaintechsolutions.com</p>
+              <p class="text-sm text-gray-500 dark:text-gray-400">We respond within 24 hours</p>
             </div>
           </div>
-
+          <!-- Address -->
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="ri-map-pin-line text-primary ri-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Visit Us</h3>
+              <p class="text-gray-600 dark:text-gray-300">123 Main Street, Suite 101</p>
+              <p class="text-gray-600 dark:text-gray-300">Anytown, CA 90210</p>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Serving clients within 25 miles</p>
+            </div>
+          </div>
+          <!-- Emergency -->
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="ri-customer-service-line text-primary ri-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Emergency Support</h3>
+              <p class="text-gray-600 dark:text-gray-300">(555) 987-6543</p>
+              <p class="text-sm text-gray-500 dark:text-gray-400">For urgent issues outside business hours</p>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-    {% include footer.html %}
-    <script src="/js/contactpage.js"></script>
-  </body>
-</html>
+
+      <!-- Interactive Form (RIGHT SIDE) -->
+      <div class="flex-1 bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl shadow-xl">
+        <h2 class="text-3xl font-bold mb-8">Let's Get You Some Help!</h2>
+        <div id="chat-area" class="flex flex-col gap-4 overflow-y-auto max-h-[60vh] p-4 bg-white dark:bg-gray-900 rounded-lg mb-6"></div>
+        <div id="input-area" class="flex flex-col space-y-4">
+          <p id="question-text" class="text-xl text-gray-700 dark:text-gray-300 font-semibold text-left">What's your name?</p>
+          <div class="flex gap-2">
+            <input type="text" id="answer-input" class="flex-1 px-4 py-2 border rounded-full focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white transition">
+            <button onclick="nextQuestion()" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/90 transition font-semibold">
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<script src="/js/contactpage.js"></script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    {% include head.html %}
+  </head>
+<body class="flex flex-col min-h-screen bg-white dark:bg-gray-900 transition-colors">
+
+    {% include header.html %}
+
+    <main class="flex-grow">
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+    {% include modal.html %}
+
+    <!-- Cookie Banner (positioned outside normal flow) -->
+    <div
+      id="cookie-banner"
+      class="fixed bottom-4 left-1/2 -translate-x-1/2 w-full max-w-xl px-6 py-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-xl rounded-lg z-50 flex flex-col md:flex-row items-start md:items-center justify-between space-y-4 md:space-y-0 md:space-x-4 transition-opacity duration-300 hidden"
+      role="dialog"
+      aria-live="polite"
+      aria-label="Cookie consent prompt"
+    >
+      <div class="text-gray-700 dark:text-gray-300 text-sm">
+        We use cookies to improve your experience. Some are essential, others help us understand site usage.
+        <a href="/pages/cookie-policy.html" class="underline text-primary hover:text-primary/80">Learn more</a>.
+      </div>
+      <div class="flex space-x-2">
+        <button
+          id="cookie-accept"
+          class="bg-primary text-white px-4 py-2 rounded hover:bg-primary/90 text-sm font-medium"
+        >
+          Accept All
+        </button>
+        <button
+          id="cookie-decline"
+          class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded hover:bg-gray-300 dark:hover:bg-gray-600 text-sm font-medium"
+        >
+          Decline
+        </button>
+      </div>
+    </div>
+    <script src="/js/cookies.js"></script>
+  </body>
+</html>

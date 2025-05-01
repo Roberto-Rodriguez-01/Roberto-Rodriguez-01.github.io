@@ -2,133 +2,120 @@
 layout: default
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    {% include head.html %}
-  </head>
-  <body class="min-h-screen transition-colors duration-300">
-    {% include header.html %}
+<!-- Services Page -->
+<section class="py-20 bg-white dark:bg-gray-900">
+  <div class="container mx-auto px-4 max-w-5xl">
+    <!-- Page Heading -->
+    <div class="text-center mb-16">
+      <h1 class="text-4xl font-bold mb-4">What We Offer</h1>
+      <p class="text-lg text-gray-600 dark:text-gray-300">
+        Whether you're a small business owner, a home office user, or just tired of dealing with tech headaches — we're here to help with straightforward, reliable solutions that are customized to your situation, not just generic fixes.
+      </p>
+    </div>
 
-    <!-- Services Page -->
-    <section class="py-20 bg-white dark:bg-gray-900">
-      <div class="container mx-auto px-4 max-w-5xl">
-        <!-- Page Heading -->
-        <div class="text-center mb-16">
-          <h1 class="text-4xl font-bold mb-4">What We Offer</h1>
-          <p class="text-lg text-gray-600 dark:text-gray-300">
-            Whether you're a small business owner, a home office user, or just tired of dealing with tech headaches — we're here to help with straightforward, reliable solutions that are customized to your situation, not just generic fixes.
-          </p>
-        </div>
+    <!-- Service Boxes -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
-        <!-- Service Boxes -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-
-          <!-- Computer & Hardware Services -->
-          <div class="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-md p-6">
-            <h2 class="text-2xl font-semibold text-primary mb-4">Computer & Hardware Services</h2>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
-              Your computer is more than just a machine — it's your workspace, your connection to the world, and in many cases, your livelihood. We specialize in diagnosing hardware issues, building custom PCs tailored to your exact use case (gaming, productivity, creative work, etc.), and making sure you’re getting the performance you paid for.
-            </p>
-            <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
-              <li>Custom PC builds with balanced components and airflow optimization</li>
-              <li>Full system diagnostics: power issues, overheating, sudden crashes</li>
-              <li>Hardware upgrades: SSD installation, RAM expansions, GPU swaps</li>
-              <li>Data transfer and cloning to new drives or systems</li>
-              <li>Printer, webcam, speaker, and peripheral troubleshooting</li>
-            </ul>
-          </div>
-
-          <!-- Tech Support & Maintenance -->
-          <div class="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-md p-6">
-            <h2 class="text-2xl font-semibold text-primary mb-4">Tech Support & Maintenance</h2>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
-              Not every issue needs a full system overhaul. Sometimes you just need someone to help get your computer back in shape, or explain what’s going wrong in terms you can understand. That’s what we’re here for. We offer one-time fixes, recurring support, and everything in between — on-site or remote.
-            </p>
-            <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
-              <li>Slow performance fixes (startup cleanup, background processes, OS tuning)</li>
-              <li>Complete virus/malware removal and security patching</li>
-              <li>Installation of trusted security software and routine scans</li>
-              <li>Remote login support for software troubleshooting and updates</li>
-              <li>Proactive monthly maintenance plans (checkups, updates, system health reports)</li>
-            </ul>
-          </div>
-
-          <!-- Networking & Internet Setup -->
-          <div class="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-md p-6">
-            <h2 class="text-2xl font-semibold text-primary mb-4">Networking & Internet Setup</h2>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
-              A good network is invisible when it works — and infuriating when it doesn’t. We set up and secure wired and wireless networks, troubleshoot dead zones or slow speeds, and make sure every device in your home or business connects reliably and safely.
-            </p>
-            <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
-              <li>Wi-Fi mesh network setup for full building coverage</li>
-              <li>Router configuration (including firewall rules, port forwarding, QoS)</li>
-              <li>Secure guest networks and isolation of smart devices</li>
-              <li>Ethernet cabling and device hardwiring (where possible)</li>
-              <li>VPN setup for secure remote access (ideal for remote workers)</li>
-            </ul>
-          </div>
-
-          <!-- Mobile & Smart Device Help -->
-          <div class="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-md p-6">
-            <h2 class="text-2xl font-semibold text-primary mb-4">Mobile & Smart Device Help</h2>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
-              From syncing your iPhone to setting up a smart home system that actually works — we simplify your devices and make sure they’re secure, efficient, and easy to use.
-            </p>
-            <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
-              <li>Phone and tablet setup (Android/iOS), account recovery, and cloud sync</li>
-              <li>Smart home configuration (Alexa, Google Home, HomeKit)</li>
-              <li>Streaming device setup: Roku, Fire Stick, Apple TV, Chromecast</li>
-              <li>Multi-room audio/video and device grouping setup</li>
-              <li>Data backup for mobile devices and cloud storage configuration</li>
-            </ul>
-          </div>
-
-          <!-- Small Business IT Solutions -->
-          <div class="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-md p-6">
-            <h2 class="text-2xl font-semibold text-primary mb-4">Small Business IT Solutions</h2>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
-              We act as your go-to IT team — without the overhead of hiring one. From secure email and file access to reliable backups and collaboration tools, we help small businesses operate confidently and efficiently.
-            </p>
-            <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
-              <li>Setup and management of Google Workspace or Microsoft 365</li>
-              <li>Email domain setup, DNS configuration, and business branding</li>
-              <li>File sharing and cloud backups using Dropbox, OneDrive, Google Drive</li>
-              <li>Secure password vault setup and training for staff</li>
-              <li>Onboarding new hires with ready-to-go accounts, devices, and policies</li>
-            </ul>
-          </div>
-
-          <!-- Specialized & Add-On Services -->
-          <div class="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-md p-6">
-            <h2 class="text-2xl font-semibold text-primary mb-4">Specialized & Add-On Services</h2>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
-              Have a unique challenge? We're ready to help. From automation scripting to gaming setups and custom workflows, we take on the tasks most people don’t know how to start.
-            </p>
-            <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
-              <li>Gaming PC performance tuning and OBS/stream setup</li>
-              <li>Linux system optimization and dual-boot configuration</li>
-              <li>Writing and deploying custom scripts (Bash, PowerShell, Python)</li>
-              <li>1-on-1 tech education sessions for individuals or small teams</li>
-              <li>Accessibility support and assistive tech configuration</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- CTA -->
-        <div class="text-center mt-20">
-          <h3 class="text-2xl font-semibold mb-4">Need something not listed here?</h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-6">
-            We offer custom solutions tailored to your needs. Reach out and let’s talk about what you’re trying to do — odds are, we can help.
-          </p>
-          <a href="/contact" class="bg-primary text-white px-6 py-3 !rounded-button hover:bg-primary/90 transition-colors font-medium inline-block">
-            Contact Us
-          </a>
-        </div>
+      <!-- Computer & Hardware Services -->
+      <div class="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-md p-6">
+        <h2 class="text-2xl font-semibold text-primary mb-4">Computer & Hardware Services</h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">
+          Your computer is more than just a machine — it's your workspace, your connection to the world, and in many cases, your livelihood. We specialize in diagnosing hardware issues, building custom PCs tailored to your exact use case (gaming, productivity, creative work, etc.), and making sure you’re getting the performance you paid for.
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
+          <li>Custom PC builds with balanced components and airflow optimization</li>
+          <li>Full system diagnostics: power issues, overheating, sudden crashes</li>
+          <li>Hardware upgrades: SSD installation, RAM expansions, GPU swaps</li>
+          <li>Data transfer and cloning to new drives or systems</li>
+          <li>Printer, webcam, speaker, and peripheral troubleshooting</li>
+        </ul>
       </div>
-    </section>
 
-    {% include footer.html %}
-    {% include modal.html %}
-  </body>
-</html>
+      <!-- Tech Support & Maintenance -->
+      <div class="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-md p-6">
+        <h2 class="text-2xl font-semibold text-primary mb-4">Tech Support & Maintenance</h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">
+          Not every issue needs a full system overhaul. Sometimes you just need someone to help get your computer back in shape, or explain what’s going wrong in terms you can understand. That’s what we’re here for. We offer one-time fixes, recurring support, and everything in between — on-site or remote.
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
+          <li>Slow performance fixes (startup cleanup, background processes, OS tuning)</li>
+          <li>Complete virus/malware removal and security patching</li>
+          <li>Installation of trusted security software and routine scans</li>
+          <li>Remote login support for software troubleshooting and updates</li>
+          <li>Proactive monthly maintenance plans (checkups, updates, system health reports)</li>
+        </ul>
+      </div>
+
+      <!-- Networking & Internet Setup -->
+      <div class="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-md p-6">
+        <h2 class="text-2xl font-semibold text-primary mb-4">Networking & Internet Setup</h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">
+          A good network is invisible when it works — and infuriating when it doesn’t. We set up and secure wired and wireless networks, troubleshoot dead zones or slow speeds, and make sure every device in your home or business connects reliably and safely.
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
+          <li>Wi-Fi mesh network setup for full building coverage</li>
+          <li>Router configuration (including firewall rules, port forwarding, QoS)</li>
+          <li>Secure guest networks and isolation of smart devices</li>
+          <li>Ethernet cabling and device hardwiring (where possible)</li>
+          <li>VPN setup for secure remote access (ideal for remote workers)</li>
+        </ul>
+      </div>
+
+      <!-- Mobile & Smart Device Help -->
+      <div class="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-md p-6">
+        <h2 class="text-2xl font-semibold text-primary mb-4">Mobile & Smart Device Help</h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">
+          From syncing your iPhone to setting up a smart home system that actually works — we simplify your devices and make sure they’re secure, efficient, and easy to use.
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
+          <li>Phone and tablet setup (Android/iOS), account recovery, and cloud sync</li>
+          <li>Smart home configuration (Alexa, Google Home, HomeKit)</li>
+          <li>Streaming device setup: Roku, Fire Stick, Apple TV, Chromecast</li>
+          <li>Multi-room audio/video and device grouping setup</li>
+          <li>Data backup for mobile devices and cloud storage configuration</li>
+        </ul>
+      </div>
+
+      <!-- Small Business IT Solutions -->
+      <div class="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-md p-6">
+        <h2 class="text-2xl font-semibold text-primary mb-4">Small Business IT Solutions</h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">
+          We act as your go-to IT team — without the overhead of hiring one. From secure email and file access to reliable backups and collaboration tools, we help small businesses operate confidently and efficiently.
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
+          <li>Setup and management of Google Workspace or Microsoft 365</li>
+          <li>Email domain setup, DNS configuration, and business branding</li>
+          <li>File sharing and cloud backups using Dropbox, OneDrive, Google Drive</li>
+          <li>Secure password vault setup and training for staff</li>
+          <li>Onboarding new hires with ready-to-go accounts, devices, and policies</li>
+        </ul>
+      </div>
+
+      <!-- Specialized & Add-On Services -->
+      <div class="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-md p-6">
+        <h2 class="text-2xl font-semibold text-primary mb-4">Specialized & Add-On Services</h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">
+          Have a unique challenge? We're ready to help. From automation scripting to gaming setups and custom workflows, we take on the tasks most people don’t know how to start.
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
+          <li>Gaming PC performance tuning and OBS/stream setup</li>
+          <li>Linux system optimization and dual-boot configuration</li>
+          <li>Writing and deploying custom scripts (Bash, PowerShell, Python)</li>
+          <li>1-on-1 tech education sessions for individuals or small teams</li>
+          <li>Accessibility support and assistive tech configuration</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-20">
+      <h3 class="text-2xl font-semibold mb-4">Need something not listed here?</h3>
+      <p class="text-gray-600 dark:text-gray-300 mb-6">
+        We offer custom solutions tailored to your needs. Reach out and let’s talk about what you’re trying to do — odds are, we can help.
+      </p>
+      <a href="/contact" class="bg-primary text-white px-6 py-3 !rounded-button hover:bg-primary/90 transition-colors font-medium inline-block">
+        Contact Us
+      </a>
+    </div>
+  </div>
+</section>

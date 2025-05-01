@@ -2,71 +2,55 @@
 layout: default
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    {% include head.html %}
-  </head>
-  <body class="min-h-screen transition-colors duration-300">
-    {% include header.html %}
+<section id="why-us" class="py-16 bg-white dark:bg-gray-900">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold mb-4">Why People Choose Us</h2>
+      <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+        We're not here to sell you the most expensive fix — we're here to get things working, explain what we're doing, and keep it simple. Here's what makes us a little different:
+      </p>
+    </div>
 
-    <section id="why-us" class="py-16 bg-white dark:bg-gray-900">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold mb-4">Why People Choose Us</h2>
-          <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            We're not here to sell you the most expensive fix — we're here to get things working, explain what we're doing, and keep it simple. Here's what makes us a little different:
-          </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="bg-gray-50 dark:bg-gray-800 rounded p-6 flex flex-col items-center text-center dark:shadow-gray-800">
+        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+          <i class="ri-wallet-3-line ri-2x text-primary"></i>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- Reason 1 -->
-          <div class="bg-gray-50 dark:bg-gray-800 rounded p-6 flex flex-col items-center text-center dark:shadow-gray-800">
-            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-              <i class="ri-wallet-3-line ri-2x text-primary"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-3">Fair, Transparent Pricing</h3>
-            <p class="text-gray-600 dark:text-gray-300">
-              No surprise fees. No upsells. Just honest work at a fair price, and advice you can trust.
-            </p>
-          </div>
-    
-          <!-- Reason 2 -->
-          <div class="bg-gray-50 dark:bg-gray-800 rounded p-6 flex flex-col items-center text-center dark:shadow-gray-800">
-            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-              <i class="ri-chat-smile-line ri-2x text-primary"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-3">Clear, Jargon-Free Help</h3>
-            <p class="text-gray-600 dark:text-gray-300">
-              We explain what's going on in plain terms — no tech talk unless you ask for it.
-            </p>
-          </div>
-    
-          <!-- Reason 3 -->
-          <div class="bg-gray-50 dark:bg-gray-800 rounded p-6 flex flex-col items-center text-center dark:shadow-gray-800">
-            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-              <i class="ri-team-line ri-2x text-primary"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-3">Problem-Solvers, Not Script Readers</h3>
-            <p class="text-gray-600 dark:text-gray-300">
-              We don't follow checklists — we figure things out. You get real solutions, not canned responses.
-            </p>
-          </div>
-    
-          <!-- Reason 4 -->
-          <div class="bg-gray-50 dark:bg-gray-800 rounded p-6 flex flex-col items-center text-center dark:shadow-gray-800">
-            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-              <i class="ri-map-pin-line ri-2x text-primary"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-3">Local & Available</h3>
-            <p class="text-gray-600 dark:text-gray-300">
-              Based in Bloomington, IL. When you reach out, you're talking to someone nearby who can actually show up if needed.
-            </p>
-          </div>
-        </div>
+        <h3 class="text-xl font-semibold mb-3">Fair, Transparent Pricing</h3>
+        <p class="text-gray-600 dark:text-gray-300">
+          No surprise fees. No upsells. Just honest work at a fair price, and advice you can trust.
+        </p>
       </div>
-    </section>
 
-    {% include footer.html %}
-    {% include modal.html %}
-  </body>
-</html> 
+      <div class="bg-gray-50 dark:bg-gray-800 rounded p-6 flex flex-col items-center text-center dark:shadow-gray-800">
+        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+          <i class="ri-chat-smile-line ri-2x text-primary"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Clear, Jargon-Free Help</h3>
+        <p class="text-gray-600 dark:text-gray-300">
+          We explain what's going on in plain terms — no tech talk unless you ask for it.
+        </p>
+      </div>
+
+      <div class="bg-gray-50 dark:bg-gray-800 rounded p-6 flex flex-col items-center text-center dark:shadow-gray-800">
+        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+          <i class="ri-team-line ri-2x text-primary"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Problem-Solvers, Not Script Readers</h3>
+        <p class="text-gray-600 dark:text-gray-300">
+          We don't follow checklists — we figure things out. You get real solutions, not canned responses.
+        </p>
+      </div>
+
+      <div class="bg-gray-50 dark:bg-gray-800 rounded p-6 flex flex-col items-center text-center dark:shadow-gray-800">
+        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+          <i class="ri-map-pin-line ri-2x text-primary"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Local & Available</h3>
+        <p class="text-gray-600 dark:text-gray-300">
+          Based in Bloomington, IL. When you reach out, you're talking to someone nearby who can actually show up if needed.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
