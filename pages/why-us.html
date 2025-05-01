@@ -10,107 +10,59 @@ layout: default
   <body class="min-h-screen transition-colors duration-300">
     {% include header.html %}
 
-    <!-- Hero Section -->
-    <section class="bg-gray-50 dark:bg-gray-800 py-16">
+    <section id="why-us" class="py-16 bg-white dark:bg-gray-900">
       <div class="container mx-auto px-4">
-        <div class="max-w-3xl mx-auto text-center">
-          <h1 class="text-4xl font-bold mb-6">Why Choose Us</h1>
-          <p class="text-xl text-gray-600 dark:text-gray-300">
-            We're different from typical IT support companies. Here's how:
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">Why People Choose Us</h2>
+          <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            We're not here to sell you the most expensive fix — we're here to get things working, explain what we're doing, and keep it simple. Here's what makes us a little different:
           </p>
         </div>
-      </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section class="py-16 bg-white dark:bg-gray-900">
-      <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <!-- Reason 1 -->
-          <div class="bg-gray-50 dark:bg-gray-800 rounded p-6 flex flex-col items-center text-center">
+          <div class="bg-gray-50 dark:bg-gray-800 rounded p-6 flex flex-col items-center text-center dark:shadow-gray-800">
             <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
               <i class="ri-wallet-3-line ri-2x text-primary"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-3">Affordable & Honest</h3>
+            <h3 class="text-xl font-semibold mb-3">Fair, Transparent Pricing</h3>
             <p class="text-gray-600 dark:text-gray-300">
-              Fair pricing with no hidden fees or unnecessary upsells. We
-              recommend only what you truly need.
+              No surprise fees. No upsells. Just honest work at a fair price, and advice you can trust.
             </p>
           </div>
-
+    
           <!-- Reason 2 -->
-          <div class="bg-gray-50 dark:bg-gray-800 rounded p-6 flex flex-col items-center text-center">
+          <div class="bg-gray-50 dark:bg-gray-800 rounded p-6 flex flex-col items-center text-center dark:shadow-gray-800">
             <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
               <i class="ri-chat-smile-line ri-2x text-primary"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-3">We Speak Your Language</h3>
+            <h3 class="text-xl font-semibold mb-3">Clear, Jargon-Free Help</h3>
             <p class="text-gray-600 dark:text-gray-300">
-              No confusing tech jargon. We explain everything in plain, simple
-              terms you can understand.
+              We explain what's going on in plain terms — no tech talk unless you ask for it.
             </p>
           </div>
-
+    
           <!-- Reason 3 -->
-          <div class="bg-gray-50 dark:bg-gray-800 rounded p-6 flex flex-col items-center text-center">
+          <div class="bg-gray-50 dark:bg-gray-800 rounded p-6 flex flex-col items-center text-center dark:shadow-gray-800">
             <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-              <i class="ri-user-heart-line ri-2x text-primary"></i>
+              <i class="ri-team-line ri-2x text-primary"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-3">Personalized Service</h3>
+            <h3 class="text-xl font-semibold mb-3">Problem-Solvers, Not Script Readers</h3>
             <p class="text-gray-600 dark:text-gray-300">
-              We take the time to understand your unique needs and provide
-              solutions that work for you.
+              We don't follow checklists — we figure things out. You get real solutions, not canned responses.
             </p>
           </div>
-
+    
           <!-- Reason 4 -->
-          <div class="bg-gray-50 dark:bg-gray-800 rounded p-6 flex flex-col items-center text-center">
+          <div class="bg-gray-50 dark:bg-gray-800 rounded p-6 flex flex-col items-center text-center dark:shadow-gray-800">
             <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-              <i class="ri-time-line ri-2x text-primary"></i>
+              <i class="ri-map-pin-line ri-2x text-primary"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-3">Fast Response Times</h3>
+            <h3 class="text-xl font-semibold mb-3">Local & Available</h3>
             <p class="text-gray-600 dark:text-gray-300">
-              Quick turnaround on support requests. We know your time is valuable.
-            </p>
-          </div>
-
-          <!-- Reason 5 -->
-          <div class="bg-gray-50 dark:bg-gray-800 rounded p-6 flex flex-col items-center text-center">
-            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-              <i class="ri-shield-check-line ri-2x text-primary"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-3">Reliable & Secure</h3>
-            <p class="text-gray-600 dark:text-gray-300">
-              Your data and systems are safe with us. We follow best practices
-              for security and reliability.
-            </p>
-          </div>
-
-          <!-- Reason 6 -->
-          <div class="bg-gray-50 dark:bg-gray-800 rounded p-6 flex flex-col items-center text-center">
-            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-              <i class="ri-community-line ri-2x text-primary"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-3">Local & Accessible</h3>
-            <p class="text-gray-600 dark:text-gray-300">
-              We're your neighbors. Face-to-face support when you need it,
-              with a personal touch.
+              Based in Bloomington, IL. When you reach out, you're talking to someone nearby who can actually show up if needed.
             </p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="py-16 bg-primary text-white">
-      <div class="container mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold mb-6">Ready to Experience the Difference?</h2>
-        <p class="text-xl mb-8 max-w-2xl mx-auto">
-          Join our growing list of satisfied clients who have discovered
-          what real tech support feels like.
-        </p>
-        <a href="/pages/contact.html" class="bg-white text-primary px-6 py-3 !rounded-button whitespace-nowrap hover:bg-gray-100 transition-colors font-medium">
-          Get Started Today
-        </a>
       </div>
     </section>
 

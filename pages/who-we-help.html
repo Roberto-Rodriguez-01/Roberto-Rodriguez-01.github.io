@@ -9,130 +9,67 @@ layout: default
   </head>
   <body class="min-h-screen transition-colors duration-300">
     {% include header.html %}
-
-    <!-- Hero Section -->
-    <section class="bg-gray-50 dark:bg-gray-800 py-16">
+    <section id="clients" class="py-16 bg-gray-50 dark:bg-gray-800">
       <div class="container mx-auto px-4">
-        <div class="max-w-3xl mx-auto text-center">
-          <h1 class="text-4xl font-bold mb-6">Who We Help</h1>
-          <p class="text-xl text-gray-600 dark:text-gray-300">
-            Our services are perfect for those who need reliable tech support
-            without the complexity.
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">Who We Help</h2>
+          <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            We work with everyday people and small teams who just need technology to work
+            — no buzzwords, no stress. Whether you're running a local business 
+            or just trying to get your printer online, we're here to make tech make sense.
           </p>
         </div>
-      </div>
-    </section>
-
-    <!-- Client Types Section -->
-    <section class="py-16 bg-white dark:bg-gray-900">
-      <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <!-- Client Type 1 -->
-          <div class="bg-gray-50 dark:bg-gray-800 rounded shadow-sm p-6 hover:shadow-md transition-shadow">
+          <div class="bg-white dark:bg-gray-900 rounded shadow-sm p-6 hover:shadow-md transition-shadow">
             <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
               <i class="ri-store-line ri-xl text-primary"></i>
             </div>
             <h3 class="text-xl font-semibold mb-3">Small Businesses</h3>
             <p class="text-gray-600 dark:text-gray-300">
-              Local shops, service providers, and small offices without in-house
-              IT departments.
+              Local shops, service providers, and growing teams that need reliable IT
             </p>
           </div>
-
           <!-- Client Type 2 -->
-          <div class="bg-gray-50 dark:bg-gray-800 rounded shadow-sm p-6 hover:shadow-md transition-shadow">
+          <div class="bg-white dark:bg-gray-900 rounded shadow-sm p-6 hover:shadow-md transition-shadow">
             <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
               <i class="ri-home-office-line ri-xl text-primary"></i>
             </div>
             <h3 class="text-xl font-semibold mb-3">Home Offices</h3>
             <p class="text-gray-600 dark:text-gray-300">
-              Remote workers, freelancers, and professionals working from home
-              needing reliable setups.
+              Remote workers, freelancers, and home-based professionals 
+              who need dependable setups, secure networks, and tech that just works 
+              — so you can focus on getting things done.
             </p>
           </div>
-
           <!-- Client Type 3 -->
-          <div class="bg-gray-50 dark:bg-gray-800 rounded shadow-sm p-6 hover:shadow-md transition-shadow">
+          <div class="bg-white dark:bg-gray-900 rounded shadow-sm p-6 hover:shadow-md transition-shadow">
             <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
               <i class="ri-mental-health-line ri-xl text-primary"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-3">Healthcare Providers</h3>
+            <h3 class="text-xl font-semibold mb-3">Licensed Professionals</h3>
             <p class="text-gray-600 dark:text-gray-300">
-              Therapists, dentists, chiropractors, and other practitioners
-              requiring secure, reliable systems.
+              Therapists, accountants, legal experts, and other solo practitioners 
+              who need secure, compliant systems and dependable support 
+              — with zero tech headaches.
             </p>
           </div>
-
           <!-- Client Type 4 -->
-          <div class="bg-gray-50 dark:bg-gray-800 rounded shadow-sm p-6 hover:shadow-md transition-shadow">
+          <div class="bg-white dark:bg-gray-900 rounded shadow-sm p-6 hover:shadow-md transition-shadow">
             <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
               <i class="ri-user-smile-line ri-xl text-primary"></i>
             </div>
             <h3 class="text-xl font-semibold mb-3">Individuals</h3>
             <p class="text-gray-600 dark:text-gray-300">
-              People who "just want it to work" and need friendly, patient tech
-              guidance.
+              Everyday users who want technology that works without the frustration. 
+              Whether it's a slow laptop, confusing Wi-Fi, or a smart home gone rogue 
+              — we're here to help.
             </p>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- Success Stories Section -->
-    <section class="py-16 bg-gray-50 dark:bg-gray-800">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-12 text-center">Success Stories</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- Story 1 -->
-          <div class="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-sm">
-            <div class="flex items-center gap-4 mb-4">
-              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                <i class="ri-store-line text-primary"></i>
-              </div>
-              <div>
-                <h3 class="text-xl font-semibold">Local Coffee Shop</h3>
-                <p class="text-gray-600 dark:text-gray-300">Small Business</p>
-              </div>
-            </div>
-            <p class="text-gray-600 dark:text-gray-300">
-              "PlainTech helped us set up our point-of-sale system and Wi-Fi network. They explained everything in simple terms and were always available when we needed help."
-            </p>
-          </div>
-
-          <!-- Story 2 -->
-          <div class="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-sm">
-            <div class="flex items-center gap-4 mb-4">
-              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                <i class="ri-home-office-line text-primary"></i>
-              </div>
-              <div>
-                <h3 class="text-xl font-semibold">Freelance Designer</h3>
-                <p class="text-gray-600 dark:text-gray-300">Home Office</p>
-              </div>
-            </div>
-            <p class="text-gray-600 dark:text-gray-300">
-              "As someone who's not tech-savvy, I was nervous about setting up my home office. PlainTech made it easy and gave me confidence in my setup."
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="py-16 bg-primary text-white">
-      <div class="container mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold mb-6">Ready to Get Started?</h2>
-        <p class="text-xl mb-8 max-w-2xl mx-auto">
-          Whether you're a small business, home office, or individual,
-          we're here to help you succeed with technology.
-        </p>
-        <a href="/pages/contact.html" class="bg-white text-primary px-6 py-3 !rounded-button whitespace-nowrap hover:bg-gray-100 transition-colors font-medium">
-          Contact Us Today
-        </a>
-      </div>
-    </section>
-
-    {% include footer.html %}
-    {% include modal.html %}
+      {% include footer.html %}
+      {% include modal.html %}
   </body>
 </html> 
