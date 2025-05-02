@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
         content += `<p class="mb-4">For immediate assistance or more information about ${title.toLowerCase()}, please contact our team:</p>`;
         content += `<ul class="list-disc pl-5 mb-4">
 <li>Call us: (555) 123-4567</li>
-<li>Email: help@plaintechsolutions.com</li>
+<li>Email: help@northbyteit.com</li>
 <li>Visit our office during business hours</li>
 </ul>`;
         modalContent.innerHTML = content;
