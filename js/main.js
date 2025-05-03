@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let content = `<p class="mb-4">This is the ${title} page content. We're working on making this content available soon.</p>`;
         content += `<p class="mb-4">For immediate assistance or more information about ${title.toLowerCase()}, please contact our team:</p>`;
         content += `<ul class="list-disc pl-5 mb-4">
-<li>Call us: (555) 123-4567</li>
+<li>Call us: (309)767-3200</li>
 <li>Email: help@northbyteit.com</li>
 <li>Visit our office during business hours</li>
 </ul>`;
