@@ -11,23 +11,23 @@ color: #f3f4f6;
 }
 .hero-section {
 background-color: #f9fafb;
-background-image: radial-gradient(circle at center, rgba(79, 70, 229, 0.15) 1px, transparent 1px);
+background-image: radial-gradient(circle at center, rgba(79, 70, 229, 0.6) 2px, transparent 2px);
 background-size: 24px 24px;
 background-position: center;
 }
 
 .pattern-dots-lg {
-background-image: radial-gradient(circle at center, rgba(79, 70, 229, 0.15) 1px, transparent 1px);
+background-image: radial-gradient(circle at center, rgba(79, 70, 229, 0.6) 2px, transparent 2px);
 background-size: 24px 24px;
 }
 
 body.dark .hero-section {
 background-color: #111827;
-background-image: radial-gradient(circle at center, rgba(79, 70, 229, 0.2) 1px, transparent 1px);
+background-image: radial-gradient(circle at center, rgba(79, 70, 229, 0.7) 2px, transparent 2px);
 }
 
 body.dark .pattern-dots-lg {
-background-image: radial-gradient(circle at center, rgba(79, 70, 229, 0.2) 1px, transparent 1px);
+background-image: radial-gradient(circle at center, rgba(79, 70, 229, 0.7) 2px, transparent 2px);
 }
 
 input:focus, button:focus {
