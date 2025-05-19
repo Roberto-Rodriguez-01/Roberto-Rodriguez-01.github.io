@@ -1,33 +1,35 @@
 :where([class^="ri-"])::before { content: "\f3c2"; }
 body {
 font-family: 'Inter', sans-serif;
-background-color: #f9fafb;
-color: #1f2937;
+background-color: #f7f8f9;
+color: #2d2e73;
 transition: background-color 0.3s, color 0.3s;
 }
 body.dark {
-background-color: #111827;
-color: #f3f4f6;
+background-color: #2d2e73;
+color: #f7f8f9;
 }
 .hero-section {
-background-color: #f9fafb;
-background-image: radial-gradient(circle at center, rgba(79, 70, 229, 0.6) 2px, transparent 2px);
+background-color: #f7f8f9;
+background-image: radial-gradient(circle at center, rgba(45, 46, 115, 0.5) 2px, transparent 2px);
 background-size: 24px 24px;
 background-position: center;
 }
 
 .pattern-dots-lg {
-background-image: radial-gradient(circle at center, rgba(79, 70, 229, 0.6) 2px, transparent 2px);
+background-color: #f7f8f9;
+background-image: radial-gradient(circle at center, rgba(45, 46, 115, 0.5) 2px, transparent 2px);
 background-size: 24px 24px;
 }
 
 body.dark .hero-section {
-background-color: #111827;
-background-image: radial-gradient(circle at center, rgba(79, 70, 229, 0.7) 2px, transparent 2px);
+background-color: #2d2e73;
+background-image: radial-gradient(circle at center, rgba(247, 248, 249, 0.4) 2px, transparent 2px);
 }
 
 body.dark .pattern-dots-lg {
-background-image: radial-gradient(circle at center, rgba(79, 70, 229, 0.7) 2px, transparent 2px);
+background-color: #2d2e73;
+background-image: radial-gradient(circle at center, rgba(247, 248, 249, 0.4) 2px, transparent 2px);
 }
 
 input:focus, button:focus {
@@ -37,4 +39,46 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
 -webkit-appearance: none;
 margin: 0;
+}
+
+/* Additional color utilities */
+.text-primary {
+color: #47bcec;
+}
+
+.text-secondary {
+color: #2d2e73;
+}
+
+.bg-primary {
+background-color: #47bcec;
+}
+
+.bg-secondary {
+background-color: #2d2e73;
+}
+
+.bg-light {
+background-color: #f7f8f9;
+}
+
+/* Dark mode specific adjustments */
+body.dark .text-primary {
+color: #47bcec;
+}
+
+body.dark .text-secondary {
+color: #f7f8f9;
+}
+
+body.dark .bg-primary {
+background-color: #47bcec;
+}
+
+body.dark .bg-secondary {
+background-color: #2d2e73;
+}
+
+body.dark .bg-light {
+background-color: #2d2e73;
 }
