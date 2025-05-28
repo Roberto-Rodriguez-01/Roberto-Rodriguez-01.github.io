@@ -202,6 +202,10 @@ html, body {
 .con {
   width: 100%;
   height: 100%;
+  background: #2d2e73;
+}
+
+body.dark .con {
   background: #000;
 }
 

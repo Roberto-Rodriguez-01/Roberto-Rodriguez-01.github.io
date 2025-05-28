@@ -14,9 +14,9 @@ const isDarkMode = document.documentElement.classList.contains('dark');
 const settings = {
   size: 20, // 屏幕尺寸按着这个尺寸分割为cell
   wireMaxLen: 40, // 每条焊线的最大节点数，即长度
-  stroke: isDarkMode ? '#81ecec' : '#2d2e73', // 焊线和焊点的颜色
-  bg: isDarkMode ? '#000' : '#f7f8f9', // pcb板的颜色
-  pathBg: isDarkMode ? '#2d3436' : '#e2e8f0', // 动画path的背景色
+  stroke: '#81ecec', // 焊线和焊点的颜色
+  bg: '#000', // pcb板的颜色
+  pathBg: '#2d3436', // 动画path的背景色
   pathBloomLength: 10, // 动画path的小光点的长度
   bloomSpeed: 50, // 动画path的小光点的速度
   straightness: 2, // 线条直线度，数值越大，越趋向于直线
@@ -28,12 +28,6 @@ function initCircuitAnimation() {
 
   // Clear previous animation
   svgCon.value.innerHTML = '';
-
-  // Update colors based on current theme
-  const isDarkMode = document.documentElement.classList.contains('dark');
-  settings.stroke = isDarkMode ? '#81ecec' : '#2d2e73';
-  settings.bg = isDarkMode ? '#000' : '#f7f8f9';
-  settings.pathBg = isDarkMode ? '#2d3436' : '#e2e8f0';
 
   const { width, height } = con.value.getBoundingClientRect();
   svgCon.value.setAttribute('width', `${width}`);
