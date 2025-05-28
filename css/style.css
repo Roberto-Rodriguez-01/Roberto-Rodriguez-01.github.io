@@ -10,26 +10,8 @@ background-color: #2d2e73;
 color: #f7f8f9;
 }
 .hero-section {
-background-color: #f7f8f9;
-background-image: radial-gradient(circle at center, rgba(45, 46, 115, 0.5) 2px, transparent 2px);
-background-size: 24px 24px;
-background-position: center;
-}
-
-.pattern-dots-lg {
-background-color: #f7f8f9;
-background-image: radial-gradient(circle at center, rgba(45, 46, 115, 0.5) 2px, transparent 2px);
-background-size: 24px 24px;
-}
-
-body.dark .hero-section {
-background-color: #2d2e73;
-background-image: radial-gradient(circle at center, rgba(247, 248, 249, 0.4) 2px, transparent 2px);
-}
-
-body.dark .pattern-dots-lg {
-background-color: #2d2e73;
-background-image: radial-gradient(circle at center, rgba(247, 248, 249, 0.4) 2px, transparent 2px);
+position: relative;
+overflow: hidden;
 }
 
 input:focus, button:focus {
@@ -203,4 +185,55 @@ body.dark .text-5xl.font-bold,
 body.dark h1.text-4xl,
 body.dark h1.text-5xl {
     color: #f7f8f9 !important;
+}
+
+/* SVG Animation Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.con {
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+
+svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes drawLine-once {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawLine-repeat {
+  0% {
+    stroke-dashoffset: var(--len-1);
+  }
+
+  100% {
+    stroke-dashoffset: var(--len_add_bloomLen);
+  }
+}
+
+.animated-path-once {
+  stroke-dasharray: var(--len), var(--len);
+  stroke-dashoffset: var(--len);
+  animation: drawLine-once 0.5s ease-in forwards;
+}
+
+.animated-path-repeat {
+  stroke-dasharray: var(--len), 10;
+  animation: drawLine-repeat var(--animate-time) linear infinite forwards;
 }
