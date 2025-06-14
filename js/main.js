@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Dark mode toggle functionality
-  const darkModeToggle = document.getElementById("darkModeToggle");
+  const themeToggle = document.querySelector(".theme-toggle");
   const htmlElement = document.documentElement;
   // Check for saved dark mode preference
   if (localStorage.getItem("darkMode") === "enabled") {
     htmlElement.classList.add("dark");
     document.body.classList.add("dark");
   }
-  darkModeToggle.addEventListener("click", () => {
+  themeToggle.addEventListener("click", () => {
     htmlElement.classList.toggle("dark");
     document.body.classList.toggle("dark");
     // Save preference

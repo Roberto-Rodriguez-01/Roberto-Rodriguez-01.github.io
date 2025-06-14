@@ -20,8 +20,7 @@ let currentQuestion = 0;
 // Store user answer here
 const userAnswer = {};
 
-// An event lister that checkes to see the the HTML document is fully loaded and parsed 
-// then runs the showQuestion function
+// An event listener that checks when the document is loaded and runs showQuestion
 document.addEventListener("DOMContentLoaded", showQuestion);
 
 function showQuestion(isEditing = false) {
@@ -160,7 +159,7 @@ function nextQuestion() {
     chatArea.scrollTop = chatArea.scrollHeight;
 
     currentQuestion++;
-      
+    
     document.getElementById("input-area").innerHTML = "";
 
     if (currentQuestion < questions.length) {
@@ -176,10 +175,7 @@ function editAnswer(index) {
     const answerBubble = document.getElementById(`answer-${index}`);
     const inputArea = document.getElementById("input-area");
   
-    // Remove only the old answer
     if (answerBubble) answerBubble.remove();
-  
-    // Temporarily clear the input area and re-show this question below the existing one
     inputArea.innerHTML = "";
     showQuestion(true);
 }
@@ -202,7 +198,7 @@ function showReviewScreen() {
         const answer = userAnswer[q.field];
         const displayValue = Array.isArray(answer) ? answer.join(", ") : answer;
         summaryHTML += `
-            <div class="flex items-start gap-2" id="answer-${index}">
+            <div class="flex items-start gap-2" id="review-answer-${index}">
                 <div class="max-w-[70%] bg-primary text-white p-3 rounded-2xl rounded-br-none animate-slide-up">
                     <strong>${q.question}</strong><br>${displayValue}
                 </div>
@@ -227,10 +223,13 @@ function validateEmail(email) {
 function submitForm() {
     const chatArea = document.getElementById("chat-area");
     const formHTML = `
-        <form action="https://formspree.io/f/{form_id}" method="POST" class="mt-8 flex flex-col items-center">
+        <form action="https://submit-form.com/LuDF1TTat" method="POST" class="mt-8 flex flex-col items-center">
             <input type="hidden" name="name" value="${userAnswer.name}">
             <input type="hidden" name="email" value="${userAnswer.email}">
             <input type="hidden" name="help" value="${Array.isArray(userAnswer.help) ? userAnswer.help.join(", ") : userAnswer.help}">
+            <!-- Cloudflare Turnstile widget -->
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAABhAuNRDx-hOInQD"></div>
+
             <button type="submit" class="bg-primary text-white px-6 py-3 rounded-full hover:bg-primary/90 transition font-semibold">
                 Submit My Request
             </button>
@@ -247,4 +246,11 @@ function submitForm() {
 
     document.getElementById("input-area").innerHTML = formHTML;
     chatArea.scrollTop = chatArea.scrollHeight;
+
+    // Guard: ensure Turnstile loaded correctly
+    setTimeout(() => {
+        if (!document.querySelector('input[name="cf-turnstile-response"]')) {
+            alert("CAPTCHA failed to load—please refresh and try again.");
+        }
+    }, 1000);
 }

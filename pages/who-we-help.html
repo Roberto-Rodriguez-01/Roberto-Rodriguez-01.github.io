@@ -2,71 +2,126 @@
 layout: default
 ---
 
-<section id="clients" class="py-16 bg-gray-50 dark:bg-gray-800">
-  <div class="container mx-auto px-4">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold mb-4">Who We Help</h2>
-      <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-        We work with everyday people and small teams who just need technology to work
-        — no buzzwords, no stress. Whether you're running a local business 
-        or just trying to get your printer online, we're here to make tech make sense.
+<section class="py-20 bg-white dark:bg-gray-900">
+  <div class="container mx-auto px-6 max-w-5xl">
+    <!-- Hero Section -->
+    <div class="text-center mb-16">
+      <h1 class="text-4xl font-bold text-gray-800 dark:text-white mb-6">👥 Who We Help</h1>
+      <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+        We work with everyday people and small teams who just need technology to work — no buzzwords, no stress. Whether you're running a local business or just trying to get your printer online, we're here to make tech make sense.
       </p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <!-- Client Type 1 -->
-      <div class="bg-white dark:bg-gray-900 rounded shadow-sm p-6 hover:shadow-md transition-shadow">
-        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-          <i class="ri-store-line ri-xl text-primary"></i>
+
+    <!-- Client Types Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+      <!-- Small Businesses -->
+      <div class="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-md p-6">
+        <div class="bg-primary/10 p-2 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+          <i class="ri-store-line text-primary text-2xl"></i>
         </div>
-        <h3 class="text-xl font-semibold mb-3">Small Businesses</h3>
-        <p class="text-gray-600 dark:text-gray-300">
-          Local shops, service providers, and growing teams that need reliable IT
+        <h2 class="text-2xl font-semibold text-primary mb-4">Small Businesses</h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">
+          Local shops, service providers, and growing teams that need reliable IT support and solutions.
         </p>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-primary mr-2">✓</span>
+            <span class="text-gray-700 dark:text-gray-300">Reliable IT infrastructure setup</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-primary mr-2">✓</span>
+            <span class="text-gray-700 dark:text-gray-300">Business software support</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-primary mr-2">✓</span>
+            <span class="text-gray-700 dark:text-gray-300">Network security and maintenance</span>
+          </li>
+        </ul>
       </div>
-      <!-- Client Type 2 -->
-      <div class="bg-white dark:bg-gray-900 rounded shadow-sm p-6 hover:shadow-md transition-shadow">
-        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-          <i class="ri-home-office-line ri-xl text-primary"></i>
+
+      <!-- Home Offices -->
+      <div class="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-md p-6">
+        <div class="bg-primary/10 p-2 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+          <i class="ri-home-office-line text-primary text-2xl"></i>
         </div>
-        <h3 class="text-xl font-semibold mb-3">Home Offices</h3>
-        <p class="text-gray-600 dark:text-gray-300">
-          Remote workers, freelancers, and home-based professionals 
-          who need dependable setups, secure networks, and tech that just works 
-          — so you can focus on getting things done.
+        <h2 class="text-2xl font-semibold text-primary mb-4">Home Offices</h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">
+          Remote workers, freelancers, and home-based professionals who need dependable setups and secure networks.
         </p>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-primary mr-2">✓</span>
+            <span class="text-gray-700 dark:text-gray-300">Remote work setup and support</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-primary mr-2">✓</span>
+            <span class="text-gray-700 dark:text-gray-300">Secure network configuration</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-primary mr-2">✓</span>
+            <span class="text-gray-700 dark:text-gray-300">Productivity tool optimization</span>
+          </li>
+        </ul>
       </div>
-      <!-- Client Type 3 -->
-      <div class="bg-white dark:bg-gray-900 rounded shadow-sm p-6 hover:shadow-md transition-shadow">
-        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-          <i class="ri-mental-health-line ri-xl text-primary"></i>
+
+      <!-- Licensed Professionals -->
+      <div class="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-md p-6">
+        <div class="bg-primary/10 p-2 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+          <i class="ri-mental-health-line text-primary text-2xl"></i>
         </div>
-        <h3 class="text-xl font-semibold mb-3">Licensed Professionals</h3>
-        <p class="text-gray-600 dark:text-gray-300">
-          Therapists, accountants, legal experts, and other solo practitioners 
-          who need secure, compliant systems and dependable support 
-          — with zero tech headaches.
+        <h2 class="text-2xl font-semibold text-primary mb-4">Licensed Professionals</h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">
+          Therapists, accountants, legal experts, and other solo practitioners who need secure, compliant systems.
         </p>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-primary mr-2">✓</span>
+            <span class="text-gray-700 dark:text-gray-300">HIPAA-compliant setups</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-primary mr-2">✓</span>
+            <span class="text-gray-700 dark:text-gray-300">Secure data management</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-primary mr-2">✓</span>
+            <span class="text-gray-700 dark:text-gray-300">Professional software support</span>
+          </li>
+        </ul>
       </div>
-      <!-- Client Type 4 -->
-      <div class="bg-white dark:bg-gray-900 rounded shadow-sm p-6 hover:shadow-md transition-shadow">
-        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-          <i class="ri-user-smile-line ri-xl text-primary"></i>
+
+      <!-- Individuals -->
+      <div class="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-md p-6">
+        <div class="bg-primary/10 p-2 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+          <i class="ri-user-smile-line text-primary text-2xl"></i>
         </div>
-        <h3 class="text-xl font-semibold mb-3">Individuals</h3>
-        <p class="text-gray-600 dark:text-gray-300">
-          Everyday users who want technology that works without the frustration. 
-          Whether it's a slow laptop, confusing Wi-Fi, or a smart home gone rogue 
-          — we're here to help.
+        <h2 class="text-2xl font-semibold text-primary mb-4">Individuals</h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">
+          Everyday users who want technology that works without the frustration. We make tech simple and reliable.
         </p>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-primary mr-2">✓</span>
+            <span class="text-gray-700 dark:text-gray-300">Device setup and optimization</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-primary mr-2">✓</span>
+            <span class="text-gray-700 dark:text-gray-300">Smart home configuration</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-primary mr-2">✓</span>
+            <span class="text-gray-700 dark:text-gray-300">Personal tech support</span>
+          </li>
+        </ul>
       </div>
     </div>
 
-    <div class="mt-16 text-center">
-      <h3 class="text-2xl font-bold mb-4">Need Tech Support?</h3>
-      <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">
+    <!-- CTA Section -->
+    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-md p-8 text-center">
+      <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Need Tech Support?</h2>
+      <p class="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
         Whether you're a small business, home office, or individual, we're here to help you get back to what matters most.
       </p>
-      <a href="/get-help" class="inline-block bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
+      <a href="/pages/contact.html" class="bg-primary text-white px-6 py-3 rounded-button hover:bg-primary/90 transition-colors font-medium inline-block">
         Get Help Now
       </a>
     </div>

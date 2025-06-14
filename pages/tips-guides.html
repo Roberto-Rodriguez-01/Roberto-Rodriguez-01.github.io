@@ -1,0 +1,259 @@
+---
+layout: default
+title: Tips & Guides
+description: Helpful tech tips, guides, and tutorials for non-technical users and small business owners
+---
+
+<div class="tips-guides-container">
+    <header class="tips-header">
+        <h1>Tech Tips & Guides</h1>
+        <p class="subtitle">Simple solutions for everyday tech challenges</p>
+        
+        <div class="search-filter-container">
+            <div class="search-box">
+                <input type="text" id="guideSearch" placeholder="Search guides...">
+                <i class="fas fa-search"></i>
+            </div>
+            
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="windows">Windows</button>
+                <button class="filter-btn" data-category="security">Security</button>
+                <button class="filter-btn" data-category="networking">Networking</button>
+                <button class="filter-btn" data-category="home-office">Home Office</button>
+                <button class="filter-btn" data-category="buying-guides">Buying Guides</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="guides-grid">
+        <!-- Windows Guides -->
+        <article class="guide-card" data-category="windows">
+            <div class="guide-icon">
+                <i class="fab fa-windows"></i>
+            </div>
+            <div class="guide-content">
+                <h2>Windows 10/11 Performance Tips</h2>
+                <p>Learn how to speed up your Windows computer with these simple maintenance steps.</p>
+                <a href="/guides/windows-performance" class="read-more">Read More</a>
+            </div>
+        </article>
+
+        <!-- Security Guides -->
+        <article class="guide-card" data-category="security">
+            <div class="guide-icon">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="guide-content">
+                <h2>Essential Security Practices</h2>
+                <p>Protect your business and personal data with these fundamental security measures.</p>
+                <a href="/guides/security-basics" class="read-more">Read More</a>
+            </div>
+        </article>
+
+        <!-- Home Office Guides -->
+        <article class="guide-card" data-category="home-office">
+            <div class="guide-icon">
+                <i class="fas fa-home"></i>
+            </div>
+            <div class="guide-content">
+                <h2>Home Office Setup Guide</h2>
+                <p>Create an efficient and comfortable workspace with our step-by-step setup guide.</p>
+                <a href="/guides/home-office-setup" class="read-more">Read More</a>
+            </div>
+        </article>
+
+        <!-- Buying Guides -->
+        <article class="guide-card" data-category="buying-guides">
+            <div class="guide-icon">
+                <i class="fas fa-laptop"></i>
+            </div>
+            <div class="guide-content">
+                <h2>Laptop Buying Guide</h2>
+                <p>Find the perfect laptop for your needs with our comprehensive buying guide.</p>
+                <a href="/guides/laptop-buying" class="read-more">Read More</a>
+            </div>
+        </article>
+    </main>
+</div>
+
+<style>
+.tips-guides-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.tips-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.tips-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.search-filter-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.search-box {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 1rem 3rem 1rem 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.search-box i {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+.category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.guide-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.guide-card:hover {
+    transform: translateY(-5px);
+}
+
+.guide-icon {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.guide-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.guide-content p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: auto;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .guides-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .category-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-btn {
+        width: 100%;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('guideSearch');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const guideCards = document.querySelectorAll('.guide-card');
+
+    // Search functionality
+    searchInput.addEventListener('input', function(e) {
+        const searchTerm = e.target.value.toLowerCase();
+        
+        guideCards.forEach(card => {
+            const title = card.querySelector('h2').textContent.toLowerCase();
+            const content = card.querySelector('p').textContent.toLowerCase();
+            
+            if (title.includes(searchTerm) || content.includes(searchTerm)) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+
+    // Category filtering
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            const category = this.dataset.category;
+            
+            guideCards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script>
