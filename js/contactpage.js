@@ -6,16 +6,26 @@ const questions = [
   ];
   
   const helpOptions = [
-    "Computer",
-    "Wi-Fi",
+    "Computer Repair & Maintenance",
+    "Virus & Malware Removal",
+    "Data Recovery",
+    "Network & Wi-Fi Setup",
+    "Printer Setup & Troubleshooting",
+    "Smart Home Setup",
+    "Website Development",
+    "Business IT Support",
     "Other"
   ];
   
   let currentQuestion = 0;
   const userAnswer = {};
   
-  // start the flow
-  document.addEventListener("DOMContentLoaded", showQuestion);
+  // start the flow immediately if DOM is ready
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", showQuestion);
+  } else {
+    showQuestion();
+  }
   
   function showQuestion() {
     const q = questions[currentQuestion];
@@ -124,49 +134,29 @@ const questions = [
   function showReviewScreen() {
     document.getElementById("chat-area").innerHTML += `
       <div class="flex justify-start mb-4">
-        <div class="max-w-[70%] bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200
-                    p-3 rounded-2xl rounded-bl-none animate-slide-up">
+        <div class="max-w-[70%] bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 p-3 rounded-2xl rounded-bl-none animate-slide-up">
           Here's your data. Confirm to submit:
         </div>
       </div>
     `;
-    const payload = {
-      data: {
-        name:  userAnswer.name,
-        email: userAnswer.email,
-        help:  userAnswer.help
-      },
-      viewLink: "https://dashboard.formspark.io/forms/"
+
+    const summary = {
+      name: userAnswer.name,
+      email: userAnswer.email,
+      message: userAnswer.help,
     };
+
     document.getElementById("input-area").innerHTML = `
-      <pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded">${JSON.stringify(payload, null, 2)}</pre>
-      <button onclick="submitData()"
-              class="mt-4 bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/90 transition font-semibold">
-        Confirm &amp; Submit
-      </button>
+      <pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded">${JSON.stringify(summary, null, 2)}</pre>
+      <form id="contact-form" action="https://submit-form.com/LuDF1TTat" method="POST" class="space-y-4 mt-4">
+        <input type="hidden" name="name" value="${userAnswer.name}">
+        <input type="hidden" name="email" value="${userAnswer.email}">
+        <input type="hidden" name="message" value="${userAnswer.help}">
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAABhAuNRDx-hOInQD"></div>
+        <button type="submit" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/90 transition font-semibold">
+          Confirm &amp; Send
+        </button>
+      </form>
     `;
-  }
-  
-  async function submitData() {
-    const endpoint = "https://submit-form.com/LuDF1TTat";
-    const body = { data: { ...userAnswer } };
-    try {
-      const res = await fetch(endpoint, {
-        method:  "POST",
-        headers: { "Content-Type": "application/json" },
-        body:    JSON.stringify(body)
-      });
-      const result = await res.json();
-      document.getElementById("input-area").innerHTML = `
-        <pre class="bg-green-50 dark:bg-green-900 p-4 rounded">${JSON.stringify(result, null, 2)}</pre>
-        <p class="mt-4">View responses: 
-          <a href="https://dashboard.formspark.io/forms/" class="underline text-primary">
-            Formspark Dashboard
-          </a>
-        </p>
-      `;
-    } catch (err) {
-      alert("Submission failed: " + err.message);
-    }
   }
   
