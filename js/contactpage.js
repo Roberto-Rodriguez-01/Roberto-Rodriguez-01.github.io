@@ -1,16 +1,13 @@
-// 1) Questions array now includes your Message field
+// only 3 questions now
 const questions = [
-    { question: "What's your name?", field: "name",  type: "text"     },
-    { question: "What's your email address?", field: "email", type: "email"    },
-    { question: "What do you need help with? (Select all that apply)", field: "help",  type: "checkbox" },
-    { question: "Message", field: "message", type: "textarea" }
+    { question: "What's your name?",                field: "name",  type: "text"     },
+    { question: "What's your email address?",       field: "email", type: "email"    },
+    { question: "What do you need help with?",      field: "help",  type: "checkbox" }
   ];
   
   const helpOptions = [
-    "Website Setup",
-    "Troubleshooting",
-    "Consultation",
-    "General Tech Support",
+    "Computer",
+    "Wi-Fi",
     "Other"
   ];
   
@@ -19,30 +16,24 @@ const questions = [
   
   document.addEventListener("DOMContentLoaded", showQuestion);
   
-  function showQuestion(isEditing = false) {
-    const chatArea = document.getElementById("chat-area");
-    const q        = questions[currentQuestion];
-  
-    // 2) Render question bubble
-    const questionHTML = `
-      <div class="flex justify-start" id="question-${currentQuestion}">
+  function showQuestion() {
+    const q = questions[currentQuestion];
+    document.querySelector('#chat-area').innerHTML += `
+      <div class="flex justify-start">
         <div class="max-w-[70%] bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200
                     p-3 rounded-2xl rounded-bl-none animate-slide-up">
           ${q.question}
         </div>
       </div>
     `;
-    chatArea.innerHTML += questionHTML;
-    chatArea.scrollTop = chatArea.scrollHeight;
   
-    // 3) Build appropriate input UI
-    let html = "";
+    let html = '';
     if (q.type === "text" || q.type === "email") {
       html = `
         <div class="flex gap-2">
           <input type="${q.type}" id="answer-input"
                  class="flex-1 px-4 py-2 border rounded-full focus:ring-2 focus:ring-primary
-                        dark:bg-gray-700 dark:border-gray-600 dark:text-white transition"
+                        dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                  placeholder="${q.question}" />
           <button onclick="nextQuestion()"
                   class="bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/90 transition font-semibold">
@@ -51,35 +42,17 @@ const questions = [
         </div>
       `;
     }
-    else if (q.type === "textarea") {
-      html = `
-        <div class="flex flex-col gap-2">
-          <textarea id="answer-input" rows="4"
-                    class="w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-primary
-                           dark:bg-gray-700 dark:border-gray-600 dark:text-white transition"
-                    placeholder="Type your message…"></textarea>
-          <button onclick="nextQuestion()"
-                  class="self-end bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/90 transition font-semibold">
-            Send
-          </button>
-        </div>
-      `;
-    }
-    else if (q.type === "checkbox") {
+    else { // checkbox
       html = `<div class="flex flex-col items-start space-y-3">`;
       helpOptions.forEach(opt => {
         html += `
           <label class="flex items-center space-x-3">
             <input type="checkbox" name="help-option" value="${opt}"
-                   class="accent-primary dark:accent-primary w-5 h-5">
-            <span class="text-gray-700 dark:text-gray-300">${opt}</span>
+                   class="accent-primary w-5 h-5">
+            <span class="dark:text-gray-300">${opt}</span>
           </label>`;
       });
       html += `</div>
-        <div id="other-text-container" class="hidden mt-4 w-full">
-          <input type="text" id="other-text" placeholder="Please specify..."
-                 class="w-full px-4 py-2 border rounded-full dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
-        </div>
         <button onclick="nextQuestion()"
                 class="mt-4 bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/90 transition font-semibold">
           Send
@@ -88,87 +61,58 @@ const questions = [
     }
   
     document.getElementById("input-area").innerHTML = html;
-    setTimeout(() => attachInputHandlers(q), 50);
+    setTimeout(() => attachHandlers(q.type), 50);
   }
   
-  function attachInputHandlers(q) {
-    if (q.type === "text" || q.type === "email" || q.type === "textarea") {
+  function attachHandlers(type) {
+    if (type === "text" || type === "email") {
       const inp = document.getElementById("answer-input");
       inp.focus();
       inp.addEventListener("keypress", e => {
-        if (e.key === "Enter" && q.type !== "textarea") {
+        if (e.key === "Enter") {
           e.preventDefault();
           nextQuestion();
         }
       });
     }
-    else if (q.type === "checkbox") {
-      const otherCb   = document.querySelector('input[value="Other"]');
-      const otherTxt  = document.getElementById("other-text");
-      if (otherCb && otherTxt) {
-        otherCb.addEventListener("change", function() {
-          document.getElementById("other-text-container")
-                  .classList.toggle("hidden", !this.checked);
-          if (this.checked) otherTxt.focus();
-        });
-        otherTxt.addEventListener("keypress", e => {
-          if (e.key === "Enter") {
-            e.preventDefault();
-            nextQuestion();
-          }
-        });
-      }
-    }
   }
   
   function nextQuestion() {
     const q = questions[currentQuestion];
-    let value;
+    let val;
   
-    if (q.type === "text" || q.type === "email" || q.type === "textarea") {
-      const inp = document.getElementById("answer-input");
-      value = inp.value.trim();
-      if (!value) {
-        alert("Please answer the question before continuing.");
-        return;
+    if (q.type === "text" || q.type === "email") {
+      val = document.getElementById("answer-input").value.trim();
+      if (!val) {
+        return alert("Please answer before continuing.");
       }
-      if (q.type === "email" && !validateEmail(value)) {
-        alert("Please enter a valid email address.");
-        return;
+      if (q.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
+        return alert("Enter a valid email.");
       }
-    }
-    else { // checkbox
-      const checked = [...document.querySelectorAll('input[name="help-option"]:checked')]
-                      .map(cb => cb.value);
+    } else { // checkbox
+      const checked = Array.from(
+        document.querySelectorAll('input[name="help-option"]:checked')
+      ).map(cb => cb.value);
       if (checked.length === 0) {
-        alert("Please select at least one option.");
-        return;
+        return alert("Select at least one option.");
       }
-      // handle "Other"
-      const otherInput = document.getElementById("other-text");
-      if (checked.includes("Other") && otherInput.value.trim()) {
-        checked.push("Other: " + otherInput.value.trim());
+      if (checked.includes("Other")) {
+        const other = prompt("Please specify:");
+        if (other) checked.push(`Other: ${other}`);
       }
-      value = checked;
+      val = checked.join(", ");
     }
   
-    userAnswer[q.field] = value;
+    userAnswer[q.field] = val;
   
-    // render the answer bubble + edit button
-    const chatArea = document.getElementById("chat-area");
-    const display  = Array.isArray(value) ? value.join(", ") : value;
-    chatArea.innerHTML += `
-      <div class="flex justify-end items-start gap-2" id="answer-${currentQuestion}">
+    // render answer bubble
+    document.querySelector('#chat-area').innerHTML += `
+      <div class="flex justify-end">
         <div class="max-w-[70%] bg-primary text-white p-3 rounded-2xl rounded-br-none animate-slide-up">
-          ${display}
+          ${val}
         </div>
-        <button onclick="editAnswer(${currentQuestion})"
-                class="text-sm text-white underline hover:text-gray-200 mt-1">
-          Edit
-        </button>
       </div>
     `;
-    chatArea.scrollTop = chatArea.scrollHeight;
   
     currentQuestion++;
     document.getElementById("input-area").innerHTML = "";
@@ -180,94 +124,65 @@ const questions = [
     }
   }
   
-  function editAnswer(index) {
-    currentQuestion = index;
-    const ansBubble = document.getElementById(`answer-${index}`);
-    if (ansBubble) ansBubble.remove();
-    document.getElementById("input-area").innerHTML = "";
-    showQuestion(true);
-  }
-  
   function showReviewScreen() {
-    const chatArea = document.getElementById("chat-area");
-    chatArea.innerHTML += `
-      <div class="flex justify-start">
+    const chat = document.getElementById("chat-area");
+    chat.innerHTML += `
+      <div class="flex justify-start mb-4">
         <div class="max-w-[70%] bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200
                     p-3 rounded-2xl rounded-bl-none animate-slide-up">
-          Here's what you told us. You can edit any response before submitting.
+          Here's your data. Confirm to submit:
         </div>
       </div>
     `;
-  
-    let summary = `<div class="space-y-4 mt-4">`;
-    questions.forEach((q,i) => {
-      const ans = userAnswer[q.field];
-      const disp = Array.isArray(ans) ? ans.join(", ") : ans;
-      summary += `
-        <div class="flex items-start gap-2" id="review-answer-${i}">
-          <div class="max-w-[70%] bg-primary text-white p-3 rounded-2xl rounded-br-none animate-slide-up">
-            <strong>${q.question}</strong><br>${disp}
-          </div>
-          <button onclick="editAnswer(${i})"
-                  class="text-sm text-white underline hover:text-gray-200 mt-1">
-            Edit
-          </button>
-        </div>`;
-    });
-    summary += `
-        <button onclick="submitForm()"
-                class="mt-6 bg-primary text-white px-6 py-3 rounded-full hover:bg-primary/90 transition font-semibold">
-          Confirm & Submit
-        </button>
-      </div>
+    let review = '<pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded">';
+    const payload = {
+      data: {
+        name:  userAnswer.name,
+        email: userAnswer.email,
+        help:  userAnswer.help
+      },
+      viewLink: "https://dashboard.formspark.io/forms/"
+    };
+    review += JSON.stringify(payload, null, 2);
+    review += '</pre>';
+    review += `
+      <button onclick="submitData()"
+              class="mt-4 bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/90 transition font-semibold">
+        Confirm & Submit
+      </button>
     `;
-    document.getElementById("input-area").innerHTML = summary;
+    document.getElementById("input-area").innerHTML = review;
   }
   
-  function submitForm() {
-    const chatArea = document.getElementById("chat-area");
-    chatArea.innerHTML += `
-      <div class="flex justify-start">
-        <div class="max-w-[70%] bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200
-                    p-3 rounded-2xl rounded-bl-none animate-slide-up">
-          Great! Please review and send your request.
-        </div>
-      </div>
-    `;
-  
-    const formHTML = `
-      <form action="https://submit-form.com/LuDF1TTat" method="POST"
-            class="mt-8 flex flex-col items-center space-y-4">
-        <input type="hidden" name="name"    value="${userAnswer.name}" />
-        <input type="hidden" name="email"   value="${userAnswer.email}" />
-        <input type="hidden" name="help"    value="${
-          Array.isArray(userAnswer.help)
-            ? userAnswer.help.join(", ")
-            : userAnswer.help
-        }" />
-        <input type="hidden" name="message" value="${userAnswer.message}" />
-  
-        <div class="cf-turnstile" data-sitekey="0x4AAAAAABhAuNRDx-hOInQD"></div>
-  
-        <button type="submit"
-                class="bg-primary text-white px-6 py-3 rounded-full hover:bg-primary/90 transition font-semibold">
-          Submit My Request
-        </button>
-      </form>
-    `;
-  
-    document.getElementById("input-area").innerHTML = formHTML;
-    chatArea.scrollTop = chatArea.scrollHeight;
-  
-    // ensure Turnstile loaded
-    setTimeout(() => {
-      if (!document.querySelector('input[name="cf-turnstile-response"]')) {
-        alert("CAPTCHA failed to load—please refresh and try again.");
+  async function submitData() {
+    const endpoint = "https://submit-form.com/LuDF1TTat";
+    const body = {
+      data: {
+        name:  userAnswer.name,
+        email: userAnswer.email,
+        help:  userAnswer.help
       }
-    }, 10000);
-  }
+    };
   
-  function validateEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    try {
+      const res = await fetch(endpoint, {
+        method:  "POST",
+        headers: { "Content-Type": "application/json" },
+        body:    JSON.stringify(body)
+      });
+      const result = await res.json();
+      document.getElementById("input-area").innerHTML = `
+        <pre class="bg-green-50 dark:bg-green-900 p-4 rounded">
+  ${JSON.stringify(result, null, 2)}
+        </pre>
+        <p class="mt-4">View all responses at:
+           <a href="https://dashboard.formspark.io/forms/" class="underline text-primary">
+             Formspark Dashboard
+           </a>
+        </p>
+      `;
+    } catch (err) {
+      alert("Submission failed: " + err.message);
+    }
   }
   
