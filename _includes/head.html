@@ -1,6 +1,14 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>North Byte IT</title>
+<title>{{ page.title | default: site.title }}</title>
+<meta name="description" content="{{ page.description | default: site.description }}" />
+<link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+<meta property="og:title" content="{{ page.title | default: site.title }}" />
+<meta property="og:description" content="{{ page.description | default: site.description }}" />
+<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+<meta property="og:image" content="{{ site.url }}/assets/logo.svg" />
+<meta property="og:site_name" content="{{ site.title }}" />
+<meta name="twitter:card" content="summary_large_image" />
 <script src="https://cdn.tailwindcss.com/3.4.16"></script>
 <script src="/js/tailwind.config.js"></script>
 <script src="/js/main.js"></script>
