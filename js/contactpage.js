@@ -252,5 +252,5 @@ function submitForm() {
         if (!document.querySelector('input[name="cf-turnstile-response"]')) {
             alert("CAPTCHA failed to load—please refresh and try again.");
         }
-    }, 1000);
+    }, 10000);
 }
