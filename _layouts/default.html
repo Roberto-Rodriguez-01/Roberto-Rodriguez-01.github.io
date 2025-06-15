@@ -3,17 +3,14 @@
   <head>
     {% include head.html %}
   </head>
-<body class="flex flex-col min-h-screen bg-white dark:bg-gray-900 transition-colors">
+  <body
+    class="flex flex-col min-h-screen bg-white dark:bg-gray-900 transition-colors"
+  >
+    {% include animated-logo-bar.html %} {% include header.html %}
 
-    {% include animated-logo-bar.html %}
-    {% include header.html %}
+    <main class="flex-grow">{{ content }}</main>
 
-    <main class="flex-grow">
-      {{ content }}
-    </main>
-
-    {% include footer.html %}
-    {% include modal.html %}
+    {% include footer.html %} {% include modal.html %}
 
     <!-- Cookie Banner (positioned outside normal flow) -->
     <div
@@ -24,8 +21,13 @@
       aria-label="Cookie consent prompt"
     >
       <div class="text-gray-700 dark:text-gray-300 text-sm">
-        We use cookies to improve your experience. Some are essential, others help us understand site usage.
-        <a href="/pages/cookie-policy.html" class="underline text-primary hover:text-primary/80">Learn more</a>.
+        We use cookies to improve your experience. Some are essential, others
+        help us understand site usage.
+        <a
+          href="/pages/cookie-policy.html"
+          class="underline text-primary hover:text-primary/80"
+          >Learn more</a
+        >.
       </div>
       <div class="flex space-x-2">
         <button

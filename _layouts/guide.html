@@ -3,183 +3,199 @@ layout: default
 ---
 
 <div class="guide-layout">
-    <nav class="guide-breadcrumb">
-        <a href="/">Home</a> &gt;
-        <a href="/pages/tips-guides.html">Tips & Guides</a> &gt;
-        <span>{{ page.title }}</span>
-    </nav>
+  <nav class="guide-breadcrumb">
+    <a href="/">Home</a> &gt;
+    <a href="/pages/tips-guides.html">Tips & Guides</a> &gt;
+    <span>{{ page.title }}</span>
+  </nav>
 
-    <article class="guide-content">
-        <header class="guide-header">
-            <h1>{{ page.title }}</h1>
-            <p class="guide-description">{{ page.description }}</p>
-            <div class="guide-meta">
-                <span class="category">{{ page.category | capitalize }}</span>
-                <span class="reading-time">5 min read</span>
-            </div>
-        </header>
+  <article class="guide-content">
+    <header class="guide-header">
+      <h1>{{ page.title }}</h1>
+      <p class="guide-description">{{ page.description }}</p>
+      <div class="guide-meta">
+        <span class="category">{{ page.category | capitalize }}</span>
+        <span class="reading-time">5 min read</span>
+      </div>
+    </header>
 
-        <div class="guide-body">
-            {{ content }}
-        </div>
-    </article>
+    <div class="guide-body">{{ content }}</div>
+  </article>
 
-    <aside class="guide-sidebar">
-        <div class="related-guides">
-            <h3>Related Guides</h3>
-            <ul>
-                {% assign related = site.guides | where_exp:"guide", "guide.category == page.category" | where_exp:"guide", "guide.title != page.title" | limit:3 %}
-                {% for guide in related %}
-                <li>
-                    <a href="{{ guide.url }}">{{ guide.title }}</a>
-                </li>
-                {% endfor %}
-            </ul>
-        </div>
+  <aside class="guide-sidebar">
+    <div class="related-guides">
+      <h3>Related Guides</h3>
+      <ul>
+        {% assign related = site.guides | where_exp:"guide", "guide.category ==
+        page.category" | where_exp:"guide", "guide.title != page.title" |
+        limit:3 %} {% for guide in related %}
+        <li>
+          <a href="{{ guide.url }}">{{ guide.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
 
-        <div class="guide-categories">
-            <h3>Categories</h3>
-            <ul>
-                <li><a href="/pages/tips-guides.html?category=windows">Windows</a></li>
-                <li><a href="/pages/tips-guides.html?category=security">Security</a></li>
-                <li><a href="/pages/tips-guides.html?category=networking">Networking</a></li>
-                <li><a href="/pages/tips-guides.html?category=home-office">Home Office</a></li>
-                <li><a href="/pages/tips-guides.html?category=buying-guides">Buying Guides</a></li>
-            </ul>
-        </div>
-    </aside>
+    <div class="guide-categories">
+      <h3>Categories</h3>
+      <ul>
+        <li><a href="/pages/tips-guides.html?category=windows">Windows</a></li>
+        <li>
+          <a href="/pages/tips-guides.html?category=security">Security</a>
+        </li>
+        <li>
+          <a href="/pages/tips-guides.html?category=networking">Networking</a>
+        </li>
+        <li>
+          <a href="/pages/tips-guides.html?category=home-office">Home Office</a>
+        </li>
+        <li>
+          <a href="/pages/tips-guides.html?category=buying-guides"
+            >Buying Guides</a
+          >
+        </li>
+      </ul>
+    </div>
+  </aside>
 </div>
 
 <style>
-.guide-layout {
+  .guide-layout {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
     display: grid;
     grid-template-columns: 1fr 300px;
     gap: 2rem;
-}
+  }
 
-.guide-breadcrumb {
+  .guide-breadcrumb {
     grid-column: 1 / -1;
     color: #666;
     font-size: 0.9rem;
-}
+  }
 
-.guide-breadcrumb a {
+  .guide-breadcrumb a {
     color: #007bff;
     text-decoration: none;
-}
+  }
 
-.guide-breadcrumb a:hover {
+  .guide-breadcrumb a:hover {
     text-decoration: underline;
-}
+  }
 
-.guide-header {
+  .guide-header {
     margin-bottom: 2rem;
-}
+  }
 
-.guide-header h1 {
+  .guide-header h1 {
     font-size: 2.5rem;
     color: #333;
     margin-bottom: 1rem;
-}
+  }
 
-.guide-description {
+  .guide-description {
     font-size: 1.2rem;
     color: #666;
     margin-bottom: 1rem;
-}
+  }
 
-.guide-meta {
+  .guide-meta {
     display: flex;
     gap: 1rem;
     color: #666;
     font-size: 0.9rem;
-}
+  }
 
-.guide-meta .category {
+  .guide-meta .category {
     background: #f0f0f0;
     padding: 0.25rem 0.75rem;
     border-radius: 15px;
-}
+  }
 
-.guide-body {
+  .guide-body {
     font-size: 1.1rem;
     line-height: 1.6;
     color: #333;
-}
+  }
 
-.guide-body h2 {
+  .guide-body h2 {
     font-size: 1.8rem;
     margin: 2rem 0 1rem;
     color: #333;
-}
+  }
 
-.guide-body h3 {
+  .guide-body h3 {
     font-size: 1.4rem;
     margin: 1.5rem 0 1rem;
     color: #444;
-}
+  }
 
-.guide-body p {
+  .guide-body p {
     margin-bottom: 1rem;
-}
+  }
 
-.guide-body ul, .guide-body ol {
+  .guide-body ul,
+  .guide-body ol {
     margin-bottom: 1rem;
     padding-left: 1.5rem;
-}
+  }
 
-.guide-body li {
+  .guide-body li {
     margin-bottom: 0.5rem;
-}
+  }
 
-.guide-sidebar {
+  .guide-sidebar {
     position: sticky;
     top: 2rem;
     height: fit-content;
-}
+  }
 
-.related-guides, .guide-categories {
+  .related-guides,
+  .guide-categories {
     background: #f8f9fa;
     padding: 1.5rem;
     border-radius: 8px;
     margin-bottom: 1.5rem;
-}
+  }
 
-.related-guides h3, .guide-categories h3 {
+  .related-guides h3,
+  .guide-categories h3 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
     color: #333;
-}
+  }
 
-.related-guides ul, .guide-categories ul {
+  .related-guides ul,
+  .guide-categories ul {
     list-style: none;
     padding: 0;
     margin: 0;
-}
+  }
 
-.related-guides li, .guide-categories li {
+  .related-guides li,
+  .guide-categories li {
     margin-bottom: 0.5rem;
-}
+  }
 
-.related-guides a, .guide-categories a {
+  .related-guides a,
+  .guide-categories a {
     color: #007bff;
     text-decoration: none;
-}
+  }
 
-.related-guides a:hover, .guide-categories a:hover {
+  .related-guides a:hover,
+  .guide-categories a:hover {
     text-decoration: underline;
-}
+  }
 
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
     .guide-layout {
-        grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
     }
 
     .guide-sidebar {
-        position: static;
+      position: static;
     }
-}
+  }
 </style>

@@ -1,85 +1,88 @@
-:where([class^="ri-"])::before { content: "\f3c2"; }
+:where([class^="ri-"])::before {
+  content: "\f3c2";
+}
 body {
-font-family: 'Inter', sans-serif;
-background-color: #f7f8f9;
-color: #2d2e73;
-transition: background-color 0.3s, color 0.3s;
+  font-family: "Inter", sans-serif;
+  background-color: #f7f8f9;
+  color: #2d2e73;
+  transition: background-color 0.3s, color 0.3s;
 }
 body.dark {
-background-color: #2d2e73;
-color: #f7f8f9;
+  background-color: #2d2e73;
+  color: #f7f8f9;
 }
 .hero-section {
-position: relative;
-overflow: hidden;
-padding-top: 3rem;
-padding-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
-input:focus, button:focus {
-outline: none;
+input:focus,
+button:focus {
+  outline: none;
 }
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
--webkit-appearance: none;
-margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /* Additional color utilities */
 .text-primary {
-color: #47bcec;
+  color: #47bcec;
 }
 
 .text-secondary {
-color: #2d2e73;
+  color: #2d2e73;
 }
 
 .bg-primary {
-background-color: #47bcec;
+  background-color: #47bcec;
 }
 
 .bg-secondary {
-background-color: #2d2e73;
+  background-color: #2d2e73;
 }
 
 .bg-light {
-background-color: #f7f8f9;
+  background-color: #f7f8f9;
 }
 
 /* Dark mode specific adjustments */
 body.dark .text-primary {
-color: #47bcec;
+  color: #47bcec;
 }
 
 body.dark .text-secondary {
-color: #f7f8f9;
+  color: #f7f8f9;
 }
 
 body.dark .bg-primary {
-background-color: #47bcec;
+  background-color: #47bcec;
 }
 
 body.dark .bg-secondary {
-background-color: #2d2e73;
+  background-color: #2d2e73;
 }
 
 body.dark .bg-light {
-background-color: #2d2e73;
+  background-color: #2d2e73;
 }
 
 /* Button styles */
-button, 
+button,
 .button,
 [type="button"],
 [type="submit"],
 .inline-block.bg-primary {
-    background-color: #2d2e73;
-    color: #f7f8f9;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 0.375rem;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
+  background-color: #2d2e73;
+  color: #f7f8f9;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
 button:hover,
@@ -87,8 +90,8 @@ button:hover,
 [type="button"]:hover,
 [type="submit"]:hover,
 .inline-block.bg-primary:hover {
-    background-color: #3d3e83;
-    transform: translateY(-1px);
+  background-color: #3d3e83;
+  transform: translateY(-1px);
 }
 
 button:active,
@@ -96,7 +99,7 @@ button:active,
 [type="button"]:active,
 [type="submit"]:active,
 .inline-block.bg-primary:active {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 body.dark button,
@@ -104,8 +107,8 @@ body.dark .button,
 body.dark [type="button"],
 body.dark [type="submit"],
 body.dark .inline-block.bg-primary {
-    background-color: #f7f8f9;
-    color: #2d2e73;
+  background-color: #f7f8f9;
+  color: #2d2e73;
 }
 
 body.dark button:hover,
@@ -113,32 +116,32 @@ body.dark .button:hover,
 body.dark [type="button"]:hover,
 body.dark [type="submit"]:hover,
 body.dark .inline-block.bg-primary:hover {
-    background-color: #e7e8e9;
+  background-color: #e7e8e9;
 }
 
 /* Override Tailwind classes */
 .bg-primary {
-    background-color: #2d2e73 !important;
+  background-color: #2d2e73 !important;
 }
 
 .hover\:bg-primary\/90:hover {
-    background-color: #3d3e83 !important;
+  background-color: #3d3e83 !important;
 }
 
 body.dark .bg-primary {
-    background-color: #f7f8f9 !important;
+  background-color: #f7f8f9 !important;
 }
 
 body.dark .hover\:bg-primary\/90:hover {
-    background-color: #e7e8e9 !important;
+  background-color: #e7e8e9 !important;
 }
 
 .text-white {
-    color: #f7f8f9 !important;
+  color: #f7f8f9 !important;
 }
 
 body.dark .text-white {
-    color: #2d2e73 !important;
+  color: #2d2e73 !important;
 }
 
 /* Value banner text colors */
@@ -146,24 +149,24 @@ body.dark .text-white {
 .text-gray-600 strong,
 .text-gray-600 span,
 .text-gray-600 p {
-    color: #2d2e73 !important;
+  color: #2d2e73 !important;
 }
 
 .text-primary,
 .text-4xl.font-bold.text-primary {
-    color: #2d2e73 !important;
+  color: #2d2e73 !important;
 }
 
 body.dark .text-gray-600,
 body.dark .text-gray-600 strong,
 body.dark .text-gray-600 span,
 body.dark .text-gray-600 p {
-    color: #f7f8f9 !important;
+  color: #f7f8f9 !important;
 }
 
 body.dark .text-primary,
 body.dark .text-4xl.font-bold.text-primary {
-    color: #f7f8f9 !important;
+  color: #f7f8f9 !important;
 }
 
 /* Override dark mode text color */
@@ -171,7 +174,7 @@ body.dark .dark\:text-gray-300,
 body.dark .dark\:text-gray-300 strong,
 body.dark .dark\:text-gray-300 span,
 body.dark .dark\:text-gray-300 p {
-    color: #f7f8f9 !important;
+  color: #f7f8f9 !important;
 }
 
 /* Hero heading text color */
@@ -179,14 +182,14 @@ body.dark .dark\:text-gray-300 p {
 .text-5xl.font-bold,
 h1.text-4xl,
 h1.text-5xl {
-    color: #2d2e73 !important;
+  color: #2d2e73 !important;
 }
 
 body.dark .text-4xl.font-bold,
 body.dark .text-5xl.font-bold,
 body.dark h1.text-4xl,
 body.dark h1.text-5xl {
-    color: #f7f8f9 !important;
+  color: #f7f8f9 !important;
 }
 
 /* SVG Animation Styles */
@@ -196,7 +199,8 @@ body.dark h1.text-5xl {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
 }
@@ -262,7 +266,7 @@ section {
 }
 
 section:not(:last-child)::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;

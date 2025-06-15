@@ -1,85 +1,85 @@
 .tutorials-container {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
 .tutorials-nav {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
 .tutorial-btn {
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    background-color: #f0f0f0;
-    color: #333;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  color: #333;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .tutorial-btn:hover {
-    background-color: #e0e0e0;
+  background-color: #e0e0e0;
 }
 
 .tutorial-btn.active {
-    background-color: #007bff;
-    color: white;
+  background-color: #007bff;
+  color: white;
 }
 
 .tutorial-section {
-    display: none;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+  display: none;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
 .tutorial-section.active {
-    display: grid;
+  display: grid;
 }
 
 .tutorial-item {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .tutorial-item:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .tutorial-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
 .tutorial-info {
-    padding: 1.5rem;
+  padding: 1.5rem;
 }
 
 .tutorial-info h3 {
-    margin: 0 0 0.5rem 0;
-    color: #333;
+  margin: 0 0 0.5rem 0;
+  color: #333;
 }
 
 .tutorial-info p {
-    margin: 0;
-    color: #666;
-    line-height: 1.5;
+  margin: 0;
+  color: #666;
+  line-height: 1.5;
 }
 
 @media (max-width: 768px) {
-    .tutorials-nav {
-        justify-content: center;
-    }
-    
-    .tutorial-section {
-        grid-template-columns: 1fr;
-    }
-} 
+  .tutorials-nav {
+    justify-content: center;
+  }
+
+  .tutorial-section {
+    grid-template-columns: 1fr;
+  }
+}

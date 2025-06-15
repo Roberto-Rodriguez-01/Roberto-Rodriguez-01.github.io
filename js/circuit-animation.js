@@ -1,28 +1,28 @@
 const { floor, random } = Math;
 
 const con = {
-  value: document.querySelector('.con')
+  value: document.querySelector(".con"),
 };
 
 const svgCon = {
-  value: document.querySelector('.svgCon')
+  value: document.querySelector(".svgCon"),
 };
 
 // Select colors based on current theme
 function getCircuitColors() {
-  const isDarkMode = document.documentElement.classList.contains('dark');
+  const isDarkMode = document.documentElement.classList.contains("dark");
 
   if (isDarkMode) {
     return {
-      stroke: '#3B82F6',      // blue for wires
-      bg: '#0a192f',          // deep blue pcb
-      pathBg: '#38F9D7',      // teal for path
+      stroke: "#3B82F6", // blue for wires
+      bg: "#0a192f", // deep blue pcb
+      pathBg: "#38F9D7", // teal for path
     };
   } else {
     return {
-      stroke: '#B8860B',      // gold for wires
-      bg: '#0A6F2F',          // pcb green
-      pathBg: '#FFD700',      // gold for path
+      stroke: "#B8860B", // gold for wires
+      bg: "#0A6F2F", // pcb green
+      pathBg: "#FFD700", // gold for path
     };
   }
 }
@@ -48,11 +48,11 @@ function initCircuitAnimation() {
   con.value.style.background = settings.bg;
 
   // Clear previous animation
-  svgCon.value.innerHTML = '';
+  svgCon.value.innerHTML = "";
 
   const { width, height } = con.value.getBoundingClientRect();
-  svgCon.value.setAttribute('width', `${width}`);
-  svgCon.value.setAttribute('height', `${height}`);
+  svgCon.value.setAttribute("width", `${width}`);
+  svgCon.value.setAttribute("height", `${height}`);
 
   const rows = floor(height / settings.size);
   const cols = floor(width / settings.size);
@@ -61,8 +61,14 @@ function initCircuitAnimation() {
   const cellsMap = {}; // {'x,y': Cell}
   const wires = [];
   const dirs = [
-    [0, 1], [1, 1], [1, 0], [1, -1],
-    [0, -1], [-1, -1], [-1, 0], [-1, 1]
+    [0, 1],
+    [1, 1],
+    [1, 0],
+    [1, -1],
+    [0, -1],
+    [-1, -1],
+    [-1, 0],
+    [-1, 1],
   ];
 
   class Cell {
@@ -87,10 +93,22 @@ function initCircuitAnimation() {
     validNoCrossOver(c1, dirInd) {
       if ([0, 2, 4, 6].includes(dirInd)) return true;
       const checks = {
-        1: [[c1.x, c1.y - 1], [c1.x + 1, c1.y]],
-        3: [[c1.x + 1, c1.y], [c1.x, c1.y + 1]],
-        5: [[c1.x - 1, c1.y], [c1.x, c1.y + 1]],
-        7: [[c1.x - 1, c1.y], [c1.x, c1.y - 1]]
+        1: [
+          [c1.x, c1.y - 1],
+          [c1.x + 1, c1.y],
+        ],
+        3: [
+          [c1.x + 1, c1.y],
+          [c1.x, c1.y + 1],
+        ],
+        5: [
+          [c1.x - 1, c1.y],
+          [c1.x, c1.y + 1],
+        ],
+        7: [
+          [c1.x - 1, c1.y],
+          [c1.x, c1.y - 1],
+        ],
       };
       const [p3, p4] = checks[dirInd] || [];
       if (!p3) return false;
@@ -105,20 +123,30 @@ function initCircuitAnimation() {
         const tries = random() < 0.5 ? [0, 1, -1] : [0, -1, 1];
 
         while (tries.length) {
-          let dirInd = last.dirInd + tries.splice(
-            floor(random() ** settings.straightness * tries.length), 1
-          )[0];
+          let dirInd =
+            last.dirInd +
+            tries.splice(
+              floor(random() ** settings.straightness * tries.length),
+              1
+            )[0];
           dirInd = (dirInd + 8) % 8;
           const [dx, dy] = dirs[dirInd];
           const x = last.x + dx;
           const y = last.y + dy;
           const index = y * cols + x;
-          const next = (index >= 0 && index < cells.length) ? cells[index] : false;
+          const next =
+            index >= 0 && index < cells.length ? cells[index] : false;
 
           if (
-            x < 0 || x >= cols || y < 0 || y >= rows ||
-            !next || !next.available || !this.validNoCrossOver(last, dirInd)
-          ) continue;
+            x < 0 ||
+            x >= cols ||
+            y < 0 ||
+            y >= rows ||
+            !next ||
+            !next.available ||
+            !this.validNoCrossOver(last, dirInd)
+          )
+            continue;
 
           next.available = false;
           next.dirInd = dirInd;
@@ -131,19 +159,28 @@ function initCircuitAnimation() {
     }
 
     draw() {
-      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-      const circle1 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-      const circle2 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-      let d = '';
+      const path = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "path"
+      );
+      const circle1 = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "circle"
+      );
+      const circle2 = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "circle"
+      );
+      let d = "";
       const s = settings.size;
       const r = random() * (s / 6) + s / 12;
 
       [circle1, circle2].forEach((c, i) => {
         const width = i === 0 ? r / 4 : r / 2;
-        c.setAttribute('r', `${r}`);
-        c.setAttribute('stroke', settings.stroke);
-        c.setAttribute('stroke-width', `${width}`);
-        c.setAttribute('fill', random() > 0.5 ? settings.stroke : settings.bg);
+        c.setAttribute("r", `${r}`);
+        c.setAttribute("stroke", settings.stroke);
+        c.setAttribute("stroke-width", `${width}`);
+        c.setAttribute("fill", random() > 0.5 ? settings.stroke : settings.bg);
       });
 
       this.cells.forEach((cur, i) => {
@@ -151,20 +188,20 @@ function initCircuitAnimation() {
         const y = cur.y * s + s / 2;
         if (i === 0) {
           d += `M ${x} ${y}`;
-          circle1.setAttribute('cx', `${x}`);
-          circle1.setAttribute('cy', `${y}`);
+          circle1.setAttribute("cx", `${x}`);
+          circle1.setAttribute("cy", `${y}`);
         }
         d += ` L ${x} ${y}`;
         if (i === this.cells.length - 1) {
-          circle2.setAttribute('cx', `${x}`);
-          circle2.setAttribute('cy', `${y}`);
+          circle2.setAttribute("cx", `${x}`);
+          circle2.setAttribute("cy", `${y}`);
         }
       });
 
-      path.setAttribute('d', d);
-      path.setAttribute('fill', 'none');
-      path.setAttribute('stroke', settings.stroke);
-      path.setAttribute('stroke-width', `${r * 2}`);
+      path.setAttribute("d", d);
+      path.setAttribute("fill", "none");
+      path.setAttribute("stroke", settings.stroke);
+      path.setAttribute("stroke-width", `${r * 2}`);
       const length = path.getTotalLength();
       path.style.cssText = `
         --len: ${length};
@@ -176,10 +213,12 @@ function initCircuitAnimation() {
       const isAnimated = random() > 0.5;
       if (isAnimated) {
         const bgPath = path.cloneNode(false);
-        path.setAttribute('stroke', settings.pathBg);
+        path.setAttribute("stroke", settings.pathBg);
         svgCon.value.append(bgPath);
       }
-      path.classList.add(isAnimated ? 'animated-path-repeat' : 'animated-path-once');
+      path.classList.add(
+        isAnimated ? "animated-path-repeat" : "animated-path-once"
+      );
       svgCon.value.append(path, circle1, circle2);
     }
   }
@@ -205,15 +244,15 @@ function initCircuitAnimation() {
 }
 
 // Initialize when the DOM is loaded
-document.addEventListener('DOMContentLoaded', initCircuitAnimation);
+document.addEventListener("DOMContentLoaded", initCircuitAnimation);
 
 // Reinitialize on window resize
-window.addEventListener('resize', initCircuitAnimation);
+window.addEventListener("resize", initCircuitAnimation);
 
 // Watch for theme changes
 const observer = new MutationObserver((mutations) => {
   mutations.forEach((mutation) => {
-    if (mutation.attributeName === 'class') {
+    if (mutation.attributeName === "class") {
       initCircuitAnimation();
     }
   });
@@ -221,5 +260,5 @@ const observer = new MutationObserver((mutations) => {
 
 observer.observe(document.documentElement, {
   attributes: true,
-  attributeFilter: ['class']
+  attributeFilter: ["class"],
 });

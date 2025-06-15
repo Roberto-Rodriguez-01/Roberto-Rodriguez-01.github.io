@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Close mobile menu when clicking menu items
     const mobileMenuLinks = mobileMenu.querySelectorAll("a");
-    mobileMenuLinks.forEach(link => {
+    mobileMenuLinks.forEach((link) => {
       link.addEventListener("click", () => {
         mobileMenu.classList.add("hidden");
         menuOpenIcon.classList.remove("hidden");
@@ -65,12 +65,12 @@ document.addEventListener("DOMContentLoaded", function () {
       if (this.checked) {
         toggleSpan.classList.add(
           "peer-checked:bg-primary",
-          "peer-checked:before:translate-x-4",
+          "peer-checked:before:translate-x-4"
         );
       } else {
         toggleSpan.classList.remove(
           "peer-checked:bg-primary",
-          "peer-checked:before:translate-x-4",
+          "peer-checked:before:translate-x-4"
         );
       }
     });
@@ -128,7 +128,9 @@ document.addEventListener("DOMContentLoaded", function () {
 <i class="ri-check-line ri-2x text-green-500"></i>
 </div>
 <p class="text-lg mb-4">Thank you for contacting us! We'll get back to you within 24 hours.</p>
-<p class="text-gray-600">A confirmation email has been sent to ${formData.get("email")}</p>
+<p class="text-gray-600">A confirmation email has been sent to ${formData.get(
+        "email"
+      )}</p>
 </div>
 `;
       modal.classList.remove("hidden");
