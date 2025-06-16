@@ -20,9 +20,9 @@ function getCircuitColors() {
     };
   } else {
     return {
-      stroke: "#B8860B", // gold for wires
-      bg: "#0A6F2F", // pcb green
-      pathBg: "#FFD700", // gold for path
+      stroke: "#fad33d", // gold for wires
+      bg: "#2d2d60", // pcb green
+      pathBg: "#63552a", // gold for path
     };
   }
 }
@@ -40,7 +40,7 @@ function initCircuitAnimation() {
     wireMaxLen: 40,
     ...colors,
     pathBloomLength: 8,
-    bloomSpeed: 60,
+    bloomSpeed: 30,
     straightness: 2,
   };
 
