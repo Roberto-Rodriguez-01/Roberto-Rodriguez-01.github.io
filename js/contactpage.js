@@ -132,26 +132,7 @@ function nextQuestion() {
 }
 
 function showReviewScreen() {
-  document.getElementById("chat-area").innerHTML += `
-      <div class="flex justify-start mb-4">
-        <div class="max-w-[70%] bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 p-3 rounded-2xl rounded-bl-none animate-slide-up">
-          Here's your data. Confirm to submit:
-        </div>
-      </div>
-    `;
-
-  const summary = {
-    name: userAnswer.name,
-    email: userAnswer.email,
-    message: userAnswer.help,
-  };
-
   document.getElementById("input-area").innerHTML = `
-      <pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded">${JSON.stringify(
-        summary,
-        null,
-        2
-      )}</pre>
       <form id="contact-form" action="https://submit-form.com/LuDF1TTat" method="POST" class="space-y-4 mt-4">
         <input type="hidden" name="name" value="${userAnswer.name}">
         <input type="hidden" name="email" value="${userAnswer.email}">
