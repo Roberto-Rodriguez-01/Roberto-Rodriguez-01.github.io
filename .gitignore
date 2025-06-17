@@ -4,3 +4,4 @@ _site/
 *.log
 *.swp
 *.tmp
+node_modules
